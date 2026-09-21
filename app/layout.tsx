@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: 'Joshua P. Smith for Council | Township of St. Joseph',
   description:
     'Joshua P. Smith is running for Council in the Township of St. Joseph. Rooted in our community and ready to serve.',
+  icons: {
+    icon: '/joshua-smith-favicon.png',
+    shortcut: '/joshua-smith-favicon.png',
+    apple: '/joshua-smith-favicon.png',
+  },
 };
 
 export default function RootLayout({
