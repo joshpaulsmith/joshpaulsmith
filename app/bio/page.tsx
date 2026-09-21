@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { BarChart3, BriefcaseBusiness, Scale, Users } from 'lucide-react';
 import { CampaignFooter, CampaignHeader, ContactBand } from '@/components/campaign-shell';
 
 export const metadata: Metadata = {
@@ -9,24 +8,6 @@ export const metadata: Metadata = {
 };
 
 export const dynamic = 'force-static';
-
-const experience = [
-  {
-    icon: BriefcaseBusiness,
-    title: 'Business and operations',
-    copy: 'A career focused primarily on helping businesses build, improve and scale.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Managing growth',
-    copy: 'Experience balancing priorities, finding practical solutions and keeping attention on sustainable results.',
-  },
-  {
-    icon: Users,
-    title: 'Clear communication',
-    copy: 'An open, collaborative approach to decisions, expectations and accountability.',
-  },
-];
 
 export default function BioPage() {
   return (
@@ -46,26 +27,6 @@ export default function BioPage() {
           height={1600}
           priority
         />
-      </section>
-
-      <section className="bio-experience">
-        <div className="bio-experience-heading">
-          <Scale size={30} strokeWidth={1.7} aria-hidden="true" />
-          <span className="overline">Experience applied to Council</span>
-          <h2>Business discipline for responsible local government.</h2>
-          <p>
-            Joshua’s career has centred on helping businesses establish strong foundations, solve operational challenges and scale responsibly. That work provides a practical lens for priorities, tradeoffs, long-term obligations and the value ratepayers receive.
-          </p>
-        </div>
-        <div className="bio-experience-grid">
-          {experience.map(({ icon: Icon, title, copy }) => (
-            <article key={title}>
-              <Icon size={24} strokeWidth={1.8} aria-hidden="true" />
-              <h2>{title}</h2>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
       </section>
 
       <article className="longform bio-story">

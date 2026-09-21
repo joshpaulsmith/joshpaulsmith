@@ -91,7 +91,7 @@ a:focus-visible {
 
 .header-main {
   display: grid;
-  grid-template-columns: 1fr minmax(340px, auto) 1fr;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   min-height: 94px;
   padding: 8px clamp(24px, 5vw, 80px);
@@ -100,7 +100,9 @@ a:focus-visible {
 .candidate-mark {
   display: inline-flex;
   flex-direction: column;
-  justify-self: start;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
   font-weight: 850;
   line-height: 1;
   letter-spacing: -0.025em;
@@ -108,7 +110,7 @@ a:focus-visible {
 }
 
 .candidate-mark strong {
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .candidate-mark span {
@@ -122,59 +124,26 @@ a:focus-visible {
 .township-lockup {
   display: flex;
   align-items: center;
-  justify-self: center;
-  gap: 16px;
+  justify-self: start;
+  gap: 12px;
 }
 
 .township-lockup img {
-  width: 68px;
-  height: 68px;
+  width: 62px;
+  height: 62px;
   object-fit: contain;
 }
 
 .township-lockup span {
-  max-width: 275px;
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  max-width: 150px;
+  font-size: 1rem;
   font-weight: 840;
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
-.call-button {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
+.header-balance {
   justify-self: end;
-  column-gap: 10px;
-  min-width: 194px;
-  padding: 10px 16px;
-  border-radius: 3px;
-  background: var(--red);
-  color: white;
-  box-shadow: 0 8px 20px rgb(202 48 63 / 18%);
-  transition: background 180ms ease, transform 180ms ease;
-}
-
-.call-button:hover {
-  background: #ae2432;
-  transform: translateY(-2px);
-}
-
-.call-button svg {
-  grid-row: 1 / 3;
-}
-
-.call-label {
-  font-size: 0.7rem;
-  font-weight: 750;
-  letter-spacing: 0.11em;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-.call-button strong {
-  font-size: 0.92rem;
-  line-height: 1.2;
 }
 
 .campaign-nav {
@@ -487,23 +456,12 @@ a:focus-visible {
   font-style: italic;
 }
 
-.platform-layout {
-  display: grid;
-  grid-template-columns: minmax(360px, 0.8fr) minmax(500px, 1.2fr);
-  align-items: start;
-  max-width: 1450px;
+.platform-section {
+  max-width: 1280px;
   margin: 0 auto;
   padding: clamp(78px, 10vw, 140px) clamp(24px, 7vw, 104px);
 }
 
-.fiscal-feature {
-  position: sticky;
-  top: 165px;
-  padding-right: clamp(38px, 6vw, 96px);
-}
-
-.fiscal-feature h2,
-.bio-experience-heading h2,
 .contact-band h2 {
   margin: 0;
   font-size: clamp(2.4rem, 4.2vw, 4.4rem);
@@ -512,42 +470,9 @@ a:focus-visible {
   letter-spacing: -0.055em;
 }
 
-.fiscal-feature > p {
-  margin: 28px 0 0;
-  color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.8;
-}
-
-.fiscal-checks {
-  margin: 42px 0 0;
-  padding: 0;
-  border-top: 1px solid #d4d5dd;
-  list-style: none;
-}
-
-.fiscal-checks li {
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  align-items: center;
-  min-height: 62px;
-  border-bottom: 1px solid #d4d5dd;
-}
-
-.fiscal-checks span {
-  color: var(--red);
-  font-size: 0.74rem;
-  font-weight: 820;
-  letter-spacing: 0.1em;
-}
-
-.fiscal-checks strong {
-  font-size: 0.94rem;
-}
-
 .platform-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid #d7d8df;
   border-left: 1px solid #d7d8df;
 }
@@ -560,69 +485,22 @@ a:focus-visible {
   background: white;
 }
 
-.platform-card:first-child {
-  grid-column: 1 / -1;
-  background: #f0f1f8;
-}
-
 .platform-card svg {
   color: var(--red);
 }
 
-.platform-card h2,
-.bio-experience-grid h2 {
+.platform-card h2 {
   margin: 50px 0 12px;
   font-size: 1.28rem;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
-.platform-card p,
-.bio-experience-grid p {
+.platform-card p {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.7;
-}
-
-.bio-experience {
-  display: grid;
-  grid-template-columns: minmax(360px, 0.82fr) minmax(520px, 1.18fr);
-  align-items: start;
-  gap: clamp(46px, 8vw, 120px);
-  padding: clamp(78px, 10vw, 140px) clamp(24px, 8vw, 128px);
-  background: var(--paper);
-}
-
-.bio-experience-heading svg {
-  margin-bottom: 26px;
-  color: var(--blue);
-}
-
-.bio-experience-heading > p {
-  margin: 28px 0 0;
-  color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.82;
-}
-
-.bio-experience-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #d7d8df;
-  border-left: 1px solid #d7d8df;
-}
-
-.bio-experience-grid article {
-  min-height: 310px;
-  padding: 30px;
-  border-right: 1px solid #d7d8df;
-  border-bottom: 1px solid #d7d8df;
-  background: white;
-}
-
-.bio-experience-grid svg {
-  color: var(--red);
 }
 
 .bio-story {
@@ -683,10 +561,6 @@ a:focus-visible {
 }
 
 @media (max-width: 1100px) {
-  .header-main {
-    grid-template-columns: 1fr minmax(300px, auto) 1fr;
-  }
-
   .home-hero {
     grid-template-columns: 1fr 1fr;
   }
@@ -703,9 +577,7 @@ a:focus-visible {
     min-height: 105px;
   }
 
-  .bio-intro-layout,
-  .platform-layout,
-  .bio-experience {
+  .bio-intro-layout {
     grid-template-columns: 1fr;
   }
 
@@ -713,24 +585,20 @@ a:focus-visible {
     max-width: 850px;
   }
 
-  .fiscal-feature {
-    position: relative;
-    top: 0;
-    max-width: 820px;
-    padding: 0 0 70px;
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 @media (max-width: 760px) {
   .header-main {
-    grid-template-columns: 0.7fr minmax(165px, 1.8fr) 0.7fr;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     min-height: 72px;
     padding: 6px 12px;
   }
 
   .candidate-mark strong {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     line-height: 1.05;
   }
 
@@ -748,23 +616,9 @@ a:focus-visible {
   }
 
   .township-lockup span {
-    max-width: 125px;
-    font-size: 1rem;
+    max-width: 98px;
+    font-size: 0.76rem;
     line-height: 1.03;
-  }
-
-  .call-button {
-    display: flex;
-    min-width: 0;
-    padding: 10px;
-  }
-
-  .call-button strong {
-    display: none;
-  }
-
-  .call-label {
-    font-size: 0.65rem;
   }
 
   .campaign-nav {
@@ -854,23 +708,16 @@ a:focus-visible {
     padding: 68px 24px;
   }
 
-  .platform-layout,
-  .bio-experience {
+  .platform-section {
     padding: 70px 24px;
   }
 
   .platform-grid,
-  .bio-experience-grid,
   .contact-band {
     grid-template-columns: 1fr;
   }
 
-  .platform-card:first-child {
-    grid-column: auto;
-  }
-
-  .platform-card,
-  .bio-experience-grid article {
+  .platform-card {
     min-height: 250px;
   }
 
@@ -885,17 +732,8 @@ a:focus-visible {
 }
 
 @media (max-width: 420px) {
-  .call-label {
-    display: none;
-  }
-
-  .candidate-mark strong {
-    max-width: 62px;
-  }
-
   .township-lockup span {
-    max-width: 108px;
-    font-size: 0.92rem;
+    display: none;
   }
 }
 

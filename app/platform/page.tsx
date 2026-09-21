@@ -50,21 +50,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <section className="platform-layout">
-        <div className="fiscal-feature">
-          <span className="overline">A responsible fiscal lens</span>
-          <h2>Spend carefully. Plan for the long term. Show the value.</h2>
-          <p>
-            Joshua’s business background has been centred on helping businesses build and scale. He will bring that same disciplined approach to municipal decisions: define the need, understand the cost, consider the long-term impact and be accountable for the result.
-          </p>
-          <ol className="fiscal-checks">
-            <li><span>01</span><strong>Is this needed?</strong></li>
-            <li><span>02</span><strong>What is the full cost?</strong></li>
-            <li><span>03</span><strong>What is the long-term value?</strong></li>
-            <li><span>04</span><strong>How will results be reported?</strong></li>
-          </ol>
-        </div>
-
+      <section className="platform-section">
         <div className="platform-grid">
           {priorities.map(({ icon: Icon, title, copy }) => (
             <article className="platform-card" key={title}>

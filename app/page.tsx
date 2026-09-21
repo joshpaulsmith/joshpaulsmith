@@ -1,17 +1,17 @@
-import Link from 'next/link';
+/* oxlint-disable nextjs/no-html-link-for-pages -- Static GitHub Pages routes require full page loads. */
 import Image from 'next/image';
 import { ArrowRight, BriefcaseBusiness, Landmark } from 'lucide-react';
 import { CampaignFooter, CampaignHeader } from '@/components/campaign-shell';
 
 const routes = [
   {
-    href: '/platform',
+    href: '/platform.html',
     icon: Landmark,
     label: 'Platform',
     copy: 'Responsible fiscal policy and strong local services.',
   },
   {
-    href: '/bio',
+    href: '/bio.html',
     icon: BriefcaseBusiness,
     label: 'Meet Joshua',
     copy: 'Family roots, business experience and a commitment to community.',
@@ -32,9 +32,9 @@ export default function Home() {
           <p>
             A fifth-generation St. Joseph Islander bringing business experience, practical decision making and a responsible fiscal lens to Council.
           </p>
-          <Link className="primary-link" href="/platform">
+          <a className="primary-link" href="/platform.html">
             Read the platform <ArrowRight size={18} aria-hidden="true" />
-          </Link>
+          </a>
         </div>
 
         <div className="campaign-sign-section">
@@ -50,14 +50,14 @@ export default function Home() {
 
       <section className="route-grid" aria-label="Explore the campaign">
         {routes.map(({ href, icon: Icon, label, copy }) => (
-          <Link className="route-card" href={href} key={href}>
+          <a className="route-card" href={href} key={href}>
             <Icon size={21} strokeWidth={1.8} aria-hidden="true" />
             <div>
               <strong>{label}</strong>
               <span>{copy}</span>
             </div>
             <ArrowRight size={20} aria-hidden="true" />
-          </Link>
+          </a>
         ))}
       </section>
 
