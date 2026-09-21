@@ -93,14 +93,31 @@ a:focus-visible {
   border-bottom: 1px solid rgb(20 32 58 / 12%);
   background: rgb(255 255 255 / 96%);
   backdrop-filter: blur(18px);
+  box-shadow: 0 8px 28px rgb(20 32 58 / 5%);
+}
+
+.campaign-header::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--logo-red) 0 25%,
+    var(--logo-yellow) 25% 50%,
+    var(--logo-blue) 50% 75%,
+    var(--logo-green) 75% 100%
+  );
+  content: '';
 }
 
 .header-main {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  min-height: 92px;
-  padding: 8px clamp(22px, 5vw, 76px);
+  min-height: 102px;
+  padding: 9px clamp(22px, 5vw, 76px);
 }
 
 .township-lockup {
@@ -111,15 +128,15 @@ a:focus-visible {
 }
 
 .township-lockup img {
-  width: 58px;
-  height: 58px;
+  width: 62px;
+  height: 62px;
   object-fit: contain;
 }
 
 .township-lockup span {
   max-width: 138px;
   font-family: var(--font-newsreader), Georgia, serif;
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   font-weight: 650;
   line-height: 1.05;
 }
@@ -132,27 +149,28 @@ a:focus-visible {
   text-align: center;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .candidate-mark strong {
-  font-size: 1.12rem;
+  font-size: 1.34rem;
   font-weight: 850;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.018em;
 }
 
 .candidate-mark span {
-  margin-top: 7px;
+  margin-top: 9px;
   color: var(--red);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
 }
 
 .header-edition {
   justify-self: end;
   margin: 0;
-  color: #707789;
-  font-size: 0.68rem;
+  color: #626b80;
+  font-size: 0.7rem;
   font-weight: 750;
   letter-spacing: 0.13em;
   text-align: right;
@@ -176,8 +194,9 @@ a:focus-visible {
   width: min(100%, 940px);
   margin: 0;
   padding: clamp(10px, 1.6vw, 18px);
+  border: 1px solid rgb(20 32 58 / 10%);
   background: var(--white);
-  box-shadow: 0 28px 70px rgb(14 23 43 / 28%);
+  box-shadow: 0 30px 75px rgb(14 23 43 / 30%);
 }
 
 .opening-sign img {
@@ -355,7 +374,7 @@ a:focus-visible {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  box-shadow: 18px 18px 0 var(--blue);
+  box-shadow: 14px 14px 0 var(--blue);
 }
 
 .letter-heading h1 {
@@ -416,7 +435,7 @@ a:focus-visible {
   align-items: end;
   gap: 70px;
   padding: clamp(76px, 9vw, 130px) clamp(24px, 8vw, 128px);
-  background: var(--red);
+  background: linear-gradient(135deg, #b92636 0%, var(--red) 58%, #d63b49 100%);
   color: var(--white);
 }
 
@@ -435,6 +454,12 @@ a:focus-visible {
   padding: 24px 0 20px;
   border-top: 1px solid rgb(255 255 255 / 55%);
   border-bottom: 1px solid rgb(255 255 255 / 55%);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.contact-band a:hover {
+  border-color: rgb(255 255 255 / 90%);
+  transform: translateX(4px);
 }
 
 .contact-band a svg {
@@ -540,7 +565,7 @@ a:focus-visible {
 
 @media (max-width: 760px) {
   .header-main {
-    min-height: 74px;
+    min-height: 80px;
     padding: 6px 14px;
   }
 
@@ -549,8 +574,8 @@ a:focus-visible {
   }
 
   .township-lockup img {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
   }
 
   .township-lockup span {
@@ -559,12 +584,13 @@ a:focus-visible {
   }
 
   .candidate-mark strong {
-    font-size: 0.78rem;
+    font-size: 0.92rem;
   }
 
   .candidate-mark span {
-    margin-top: 5px;
-    font-size: 0.56rem;
+    margin-top: 6px;
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
   }
 
   .header-edition span {
@@ -639,7 +665,7 @@ a:focus-visible {
   }
 
   .letter-family-photo img {
-    box-shadow: 10px 10px 0 var(--blue);
+    box-shadow: 8px 8px 0 var(--blue);
   }
 
   .letter-copy p {
@@ -676,11 +702,11 @@ a:focus-visible {
   }
 
   .candidate-mark strong {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
   }
 
   .candidate-mark span {
-    font-size: 0.52rem;
+    font-size: 0.54rem;
     letter-spacing: 0.17em;
   }
 
