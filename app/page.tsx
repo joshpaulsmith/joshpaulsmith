@@ -3,24 +3,20 @@ import { CampaignFooter, CampaignHeader, ContactBand } from '@/components/campai
 
 const priorities = [
   {
-    title: 'Responsible fiscal policy',
-    copy: 'Treat every tax dollar with care, understand the full cost of decisions and focus spending on measurable value for ratepayers.',
-  },
-  {
-    title: 'Local business and economy',
-    copy: 'Support the people building businesses here and strengthen the conditions that help our local economy grow.',
-  },
-  {
-    title: 'Roads and core services',
-    copy: 'Keep roads safe and well cared for while protecting the dependable services residents use every day.',
+    title: 'Roads, core services and community preservation',
+    copy: 'Prioritize safe, well-maintained roads and dependable core services while protecting the character, heritage and natural setting that make our Township home.',
   },
   {
     title: 'Families and community life',
-    copy: 'Invest in recreation, facilities and activities that bring neighbours together and make this a great place to raise a family.',
+    copy: 'Support recreation, facilities and activities that bring neighbours together and make the Township a place where families can build their lives.',
   },
   {
-    title: 'Open and accountable council',
-    copy: 'Communicate project scope, cost and progress clearly, and give residents a meaningful opportunity to be heard.',
+    title: 'Responsible and transparent fiscal policy',
+    copy: 'Treat every tax dollar with care, explain costs and decisions clearly, and give ratepayers a meaningful voice before commitments are made.',
+  },
+  {
+    title: 'Local businesses and the Island economy',
+    copy: 'Support the people building businesses here and strengthen the conditions for local employers, entrepreneurs and responsible growth.',
   },
 ];
 

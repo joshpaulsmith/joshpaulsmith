@@ -34,6 +34,10 @@
   --blue: #43488f;
   --blue-deep: #303675;
   --red: #cb303f;
+  --logo-red: #d62e3e;
+  --logo-yellow: #f4cf37;
+  --logo-blue: #2b88c4;
+  --logo-green: #27934d;
   --paper: #f4f5f8;
   --white: #ffffff;
   --line: #d9dce5;
@@ -207,8 +211,14 @@ a:focus-visible {
 
 .platform-section {
   padding: clamp(88px, 10vw, 150px) clamp(24px, 7vw, 112px);
-  background: var(--ink);
+  background:
+    radial-gradient(circle at 100% 0, rgb(43 136 196 / 13%), transparent 34%),
+    var(--ink);
   color: var(--white);
+}
+
+.platform-section .eyebrow-light {
+  color: var(--logo-yellow);
 }
 
 .section-heading {
@@ -240,7 +250,7 @@ a:focus-visible {
 
 .priority-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   max-width: 1400px;
   margin: 0 auto;
   border-top: 1px solid rgb(255 255 255 / 20%);
@@ -248,11 +258,37 @@ a:focus-visible {
 }
 
 .priority-item {
+  --priority-accent: var(--logo-red);
+
+  position: relative;
   min-height: 250px;
+  overflow: hidden;
   padding: clamp(28px, 3vw, 44px);
   border-right: 1px solid rgb(255 255 255 / 20%);
   border-bottom: 1px solid rgb(255 255 255 / 20%);
   transition: background 180ms ease;
+}
+
+.priority-item:nth-child(2) {
+  --priority-accent: var(--logo-yellow);
+}
+
+.priority-item:nth-child(3) {
+  --priority-accent: var(--logo-blue);
+}
+
+.priority-item:nth-child(4) {
+  --priority-accent: var(--logo-green);
+}
+
+.priority-item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background: var(--priority-accent);
+  content: '';
 }
 
 .priority-item:hover {
@@ -260,10 +296,9 @@ a:focus-visible {
 }
 
 .priority-item h3 {
-  max-width: 260px;
+  max-width: 520px;
   margin: 0 0 18px;
-  padding-top: 22px;
-  border-top: 3px solid #ff7884;
+  padding-top: 10px;
   font-family: var(--font-newsreader), Georgia, serif;
   font-size: clamp(1.6rem, 2.3vw, 2.15rem);
   font-weight: 610;
