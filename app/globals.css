@@ -159,63 +159,44 @@ a:focus-visible {
   display: block;
 }
 
-.campaign-hero {
+.campaign-intro {
   display: grid;
-  grid-template-columns: minmax(440px, 0.9fr) minmax(520px, 1.1fr);
+  grid-template-columns: minmax(150px, 230px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(34px, 6vw, 90px);
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: clamp(44px, 6vw, 82px) clamp(24px, 7vw, 104px);
   background: var(--white);
 }
 
-.hero-portrait-panel {
-  display: grid;
-  place-items: center;
-  min-height: 690px;
-  padding: clamp(54px, 7vw, 110px);
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 25% 22%, rgb(255 255 255 / 16%), transparent 34%),
-    linear-gradient(135deg, rgb(255 255 255 / 6%) 1px, transparent 1px),
-    var(--blue);
-  background-size: auto, 36px 36px;
-}
-
-.portrait-frame {
-  width: min(76%, 540px);
+.intro-portrait {
+  width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
-  border: clamp(8px, 1.2vw, 14px) solid var(--white);
+  border: 7px solid var(--white);
   border-radius: 50%;
-  box-shadow: 28px 28px 0 var(--red), 0 28px 70px rgb(20 32 58 / 34%);
+  box-shadow: 11px 11px 0 var(--red), 0 16px 38px rgb(20 32 58 / 20%);
 }
 
-.portrait-frame img {
+.intro-portrait img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(64px, 8vw, 132px) clamp(28px, 6.5vw, 104px);
-  background:
-    radial-gradient(circle at 10% 0%, rgb(67 72 143 / 11%), transparent 33%),
-    linear-gradient(135deg, transparent 0 72%, rgb(67 72 143 / 4%) 72%),
-    var(--paper);
-}
-
-.hero-banner {
+.intro-banner {
   display: grid;
-  grid-column: 1 / -1;
   place-items: center;
-  padding: 18px clamp(18px, 6vw, 90px);
+  padding: clamp(10px, 1.6vw, 18px);
   background: var(--blue);
+  box-shadow: 16px 16px 0 rgb(67 72 143 / 12%);
 }
 
-.hero-banner img {
+.intro-banner img {
   display: block;
-  width: min(100%, 1176px);
+  width: 100%;
   height: auto;
 }
 
@@ -233,107 +214,14 @@ a:focus-visible {
   color: #ff9ca6;
 }
 
-.hero-copy h1,
 .section-heading h2,
-.family-copy h2,
-.letter-heading h2,
+.letter-heading h1,
 .closing-sign-copy h2,
 .contact-band h2 {
   margin: 0;
   font-family: var(--font-newsreader), Georgia, serif;
   font-weight: 610;
   letter-spacing: -0.045em;
-}
-
-.hero-copy h1 {
-  font-size: clamp(4rem, 7.4vw, 7.5rem);
-  line-height: 0.87;
-}
-
-.hero-copy h1 em {
-  color: var(--blue);
-  font-weight: 520;
-}
-
-.hero-copy > p {
-  max-width: 620px;
-  margin: 34px 0 0;
-  color: var(--ink-soft);
-  font-size: clamp(1.02rem, 1.3vw, 1.17rem);
-  line-height: 1.75;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 24px;
-  margin-top: 38px;
-}
-
-.phone-button {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  column-gap: 12px;
-  min-width: 230px;
-  padding: 14px 20px;
-  border-radius: 2px;
-  background: var(--red);
-  color: var(--white);
-  box-shadow: 0 12px 28px rgb(203 48 63 / 20%);
-  transition: background 180ms ease, transform 180ms ease;
-}
-
-.phone-button:hover {
-  background: #ac2633;
-  transform: translateY(-2px);
-}
-
-.phone-button svg {
-  grid-row: 1 / 3;
-}
-
-.phone-button span {
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.phone-button strong {
-  margin-top: 4px;
-  font-size: 1rem;
-  line-height: 1.15;
-}
-
-.text-link {
-  padding: 8px 0 5px;
-  border-bottom: 2px solid var(--blue);
-  color: var(--blue-deep);
-  font-size: 0.86rem;
-  font-weight: 780;
-}
-
-.hero-notes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 28px;
-  margin-top: 42px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  color: #6a7284;
-  font-size: 0.7rem;
-  font-weight: 760;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.hero-notes span::before {
-  color: var(--red);
-  content: '•';
-  margin-right: 9px;
 }
 
 .platform-section {
@@ -418,122 +306,54 @@ a:focus-visible {
   line-height: 1.75;
 }
 
-.family-section {
-  display: grid;
-  grid-template-columns: minmax(480px, 1.15fr) minmax(360px, 0.85fr);
-  align-items: center;
-  gap: clamp(56px, 8vw, 130px);
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: clamp(92px, 11vw, 170px) clamp(24px, 7vw, 110px);
-}
-
-.family-photo {
-  position: relative;
-  margin: 0;
-}
-
-.family-photo::before {
-  position: absolute;
-  z-index: -1;
-  top: 24px;
-  right: -24px;
-  bottom: -24px;
-  left: 24px;
-  background: var(--blue);
-  content: '';
-}
-
-.family-photo img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-}
-
-.family-copy h2 {
-  font-size: clamp(3.2rem, 5.6vw, 5.8rem);
-  line-height: 0.95;
-}
-
-.family-copy > p {
-  margin: 24px 0 0;
-  color: var(--ink-soft);
-  line-height: 1.82;
-}
-
-.family-copy .family-lead {
-  margin-top: 34px;
-  color: var(--ink);
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: clamp(1.3rem, 2.1vw, 1.7rem);
-  font-weight: 560;
-  line-height: 1.45;
-}
-
-.family-facts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 38px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-}
-
-.family-facts div {
-  display: flex;
-  flex-direction: column;
-}
-
-.family-facts strong {
-  color: var(--blue);
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: 2.7rem;
-  font-weight: 650;
-  line-height: 1;
-}
-
-.family-facts span {
-  margin-top: 8px;
-  color: #697084;
-  font-size: 0.7rem;
-  font-weight: 760;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .candidate-letter {
-  padding: clamp(90px, 11vw, 170px) clamp(24px, 8vw, 128px);
+  padding: clamp(76px, 9vw, 130px) clamp(24px, 8vw, 128px) clamp(94px, 11vw, 170px);
   background: var(--white);
 }
 
-.letter-heading,
+.letter-opening,
 .letter-copy {
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.letter-heading {
+.letter-opening {
   display: grid;
-  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
-  align-items: end;
-  gap: clamp(52px, 9vw, 150px);
+  grid-template-columns: minmax(440px, 1.08fr) minmax(340px, 0.92fr);
+  align-items: center;
+  gap: clamp(46px, 8vw, 120px);
   margin-bottom: clamp(62px, 8vw, 112px);
 }
 
-.letter-heading .eyebrow {
-  grid-column: 1 / -1;
-  margin-bottom: -22px;
+.letter-family-photo {
+  margin: 0;
 }
 
-.letter-heading h2 {
-  font-size: clamp(3.4rem, 6.4vw, 6.5rem);
+.letter-family-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  box-shadow: 18px 18px 0 var(--blue);
+}
+
+.letter-family-photo figcaption {
+  margin-top: 16px;
+  color: #707789;
+  font-size: 0.7rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.letter-heading h1 {
+  font-size: clamp(3.4rem, 6.2vw, 6.2rem);
   line-height: 0.9;
 }
 
 .letter-heading blockquote {
-  margin: 0;
+  margin: 40px 0 0;
   padding: 28px 0;
   border-top: 3px solid var(--red);
   border-bottom: 1px solid var(--line);
@@ -704,33 +524,24 @@ a:focus-visible {
 }
 
 @media (max-width: 1080px) {
-  .campaign-hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .hero-portrait-panel {
-    min-height: 580px;
-  }
-
-  .portrait-frame {
-    width: min(58vw, 470px);
-  }
-
-  .hero-copy {
-    min-height: 620px;
+  .campaign-intro {
+    grid-template-columns: 190px minmax(0, 1fr);
   }
 
   .priority-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .family-section {
+  .letter-opening {
     grid-template-columns: 1fr;
   }
 
-  .family-photo {
+  .letter-family-photo {
     max-width: 900px;
+  }
+
+  .letter-heading {
+    max-width: 760px;
   }
 
   .closing-sign-section {
@@ -779,71 +590,39 @@ a:focus-visible {
     display: none;
   }
 
-  .campaign-hero {
-    min-height: auto;
+  .campaign-intro {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 38px 24px 54px;
   }
 
-  .hero-portrait-panel {
-    min-height: 390px;
-    padding: 46px 24px 58px;
+  .intro-portrait {
+    width: 138px;
+    justify-self: center;
+    border-width: 5px;
+    box-shadow: 8px 8px 0 var(--red), 0 12px 28px rgb(20 32 58 / 18%);
   }
 
-  .portrait-frame {
-    width: min(72vw, 310px);
-    box-shadow: 14px 14px 0 var(--red), 0 20px 45px rgb(20 32 58 / 32%);
-  }
-
-  .hero-copy {
-    min-height: 0;
-    padding: 62px 24px 54px;
-  }
-
-  .hero-copy h1 {
-    font-size: clamp(3.7rem, 18vw, 5.2rem);
-  }
-
-  .hero-copy > p {
-    margin-top: 26px;
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-
-  .hero-actions {
-    align-items: stretch;
-    gap: 18px;
-    margin-top: 30px;
-  }
-
-  .phone-button {
-    min-width: 215px;
-  }
-
-  .hero-notes {
-    margin-top: 32px;
-  }
-
-  .hero-banner {
-    padding: 10px 0;
+  .intro-banner {
+    padding: 8px;
+    box-shadow: 10px 10px 0 rgb(67 72 143 / 12%);
   }
 
   .platform-section {
     padding: 80px 24px;
   }
 
-  .section-heading,
-  .letter-heading {
+  .section-heading {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  .section-heading .eyebrow,
-  .letter-heading .eyebrow {
+  .section-heading .eyebrow {
     margin-bottom: -4px;
   }
 
   .section-heading h2,
-  .family-copy h2,
-  .letter-heading h2,
+  .letter-heading h1,
   .closing-sign-copy h2,
   .contact-band h2 {
     font-size: clamp(3.15rem, 15vw, 4.6rem);
@@ -862,28 +641,17 @@ a:focus-visible {
     font-size: 1.8rem;
   }
 
-  .family-section {
-    gap: 66px;
-    padding: 86px 24px;
-  }
-
-  .family-photo::before {
-    top: 12px;
-    right: -12px;
-    bottom: -12px;
-    left: 12px;
-  }
-
-  .family-facts {
-    gap: 14px;
-  }
-
   .candidate-letter {
     padding: 86px 24px;
   }
 
-  .letter-heading {
+  .letter-opening {
+    gap: 52px;
     margin-bottom: 56px;
+  }
+
+  .letter-family-photo img {
+    box-shadow: 10px 10px 0 var(--blue);
   }
 
   .letter-copy {
@@ -927,10 +695,6 @@ a:focus-visible {
 @media (max-width: 430px) {
   .township-lockup span {
     display: none;
-  }
-
-  .family-facts strong {
-    font-size: 2.2rem;
   }
 }
 
