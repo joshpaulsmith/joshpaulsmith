@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: 'Joshua Smith’s priorities for responsible fiscal policy, local services and transparent council decisions.',
 };
 
+export const dynamic = 'force-static';
+
 const priorities = [
   {
     icon: CircleDollarSign,

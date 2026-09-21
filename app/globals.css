@@ -243,8 +243,7 @@ a:focus-visible {
 }
 
 .home-copy h1,
-.page-intro h1,
-.experience-hero h1 {
+.page-intro h1 {
   margin: 0;
   font-size: clamp(3.2rem, 6.4vw, 6.5rem);
   font-weight: 860;
@@ -264,20 +263,6 @@ a:focus-visible {
   color: #4d5365;
   font-size: clamp(1.02rem, 1.35vw, 1.2rem);
   line-height: 1.7;
-}
-
-.credential-line {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 25px;
-  color: var(--blue-dark);
-  font-size: 0.94rem;
-  font-weight: 760;
-}
-
-.credential-line svg {
-  color: var(--red);
 }
 
 .primary-link {
@@ -317,7 +302,7 @@ a:focus-visible {
 
 .route-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid #d9dae1;
   border-left: 1px solid #d9dae1;
   background: white;
@@ -419,13 +404,11 @@ a:focus-visible {
   max-width: 900px;
 }
 
-.page-intro h1,
-.experience-hero h1 {
+.page-intro h1 {
   font-size: clamp(3rem, 6vw, 6rem);
 }
 
-.page-intro p,
-.experience-hero > div:first-child > p {
+.page-intro p {
   max-width: 700px;
   margin: 30px 0 0;
   color: var(--muted);
@@ -448,7 +431,7 @@ a:focus-visible {
   color: rgb(255 255 255 / 75%);
 }
 
-.article-intro-layout {
+.bio-intro-layout {
   display: grid;
   grid-template-columns: minmax(330px, 0.8fr) minmax(440px, 1.2fr);
   align-items: center;
@@ -456,7 +439,7 @@ a:focus-visible {
   background: white;
 }
 
-.article-intro-layout img {
+.bio-intro-layout img {
   display: block;
   width: 100%;
   aspect-ratio: 3 / 2;
@@ -520,7 +503,7 @@ a:focus-visible {
 }
 
 .fiscal-feature h2,
-.council-application h2,
+.bio-experience-heading h2,
 .contact-band h2 {
   margin: 0;
   font-size: clamp(2.4rem, 4.2vw, 4.4rem);
@@ -587,7 +570,7 @@ a:focus-visible {
 }
 
 .platform-card h2,
-.qualification-grid h2 {
+.bio-experience-grid h2 {
   margin: 50px 0 12px;
   font-size: 1.28rem;
   line-height: 1.2;
@@ -595,97 +578,63 @@ a:focus-visible {
 }
 
 .platform-card p,
-.qualification-grid p {
+.bio-experience-grid p {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
-.experience-hero {
+.bio-experience {
   display: grid;
-  grid-template-columns: minmax(420px, 1fr) minmax(310px, 0.48fr);
-  align-items: center;
-  gap: clamp(50px, 8vw, 130px);
-  min-height: 620px;
-  padding: clamp(72px, 9vw, 140px) clamp(24px, 8vw, 128px);
-  background: white;
+  grid-template-columns: minmax(360px, 0.82fr) minmax(520px, 1.18fr);
+  align-items: start;
+  gap: clamp(46px, 8vw, 120px);
+  padding: clamp(78px, 10vw, 140px) clamp(24px, 8vw, 128px);
+  background: var(--paper);
 }
 
-.experience-credential {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: clamp(36px, 5vw, 64px);
-  background: var(--blue);
-  color: white;
-  box-shadow: 18px 18px 0 var(--red);
+.bio-experience-heading svg {
+  margin-bottom: 26px;
+  color: var(--blue);
 }
 
-.experience-credential svg {
-  margin-bottom: 58px;
+.bio-experience-heading > p {
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.82;
 }
 
-.experience-credential span {
-  color: #d3d5f1;
-  font-size: 0.74rem;
-  font-weight: 780;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.experience-credential strong {
-  margin-top: 12px;
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
-  line-height: 1.08;
-  letter-spacing: -0.045em;
-}
-
-.qualification-section {
-  padding: clamp(78px, 10vw, 140px) clamp(24px, 7vw, 108px);
-}
-
-.qualification-grid {
+.bio-experience-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 1320px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid #d7d8df;
   border-left: 1px solid #d7d8df;
 }
 
-.qualification-grid article {
-  min-height: 315px;
-  padding: 32px;
+.bio-experience-grid article {
+  min-height: 310px;
+  padding: 30px;
   border-right: 1px solid #d7d8df;
   border-bottom: 1px solid #d7d8df;
   background: white;
 }
 
-.qualification-grid svg {
+.bio-experience-grid svg {
   color: var(--red);
 }
 
-.council-application {
-  display: grid;
-  grid-template-columns: minmax(360px, 0.9fr) minmax(360px, 0.7fr);
-  gap: clamp(40px, 9vw, 140px);
-  max-width: 1120px;
-  margin: clamp(80px, 10vw, 140px) auto 0;
-  padding-top: clamp(54px, 7vw, 90px);
-  border-top: 5px solid var(--red);
+.bio-story {
+  max-width: 850px;
 }
 
-.application-heading svg {
-  margin-bottom: 26px;
-  color: var(--blue);
-}
-
-.application-copy p {
-  margin: 0 0 26px;
-  color: var(--muted);
-  font-size: 1.04rem;
-  line-height: 1.82;
+.bio-story > h2 {
+  margin: 0 0 42px;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-weight: 840;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
 }
 
 .contact-band {
@@ -754,13 +703,13 @@ a:focus-visible {
     min-height: 105px;
   }
 
-  .article-intro-layout,
+  .bio-intro-layout,
   .platform-layout,
-  .experience-hero {
+  .bio-experience {
     grid-template-columns: 1fr;
   }
 
-  .article-intro-layout img {
+  .bio-intro-layout img {
     max-width: 850px;
   }
 
@@ -771,13 +720,6 @@ a:focus-visible {
     padding: 0 0 70px;
   }
 
-  .experience-credential {
-    max-width: 520px;
-  }
-
-  .qualification-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 760px) {
@@ -827,7 +769,7 @@ a:focus-visible {
 
   .campaign-nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
     min-height: 40px;
   }
@@ -874,11 +816,6 @@ a:focus-visible {
     font-size: 0.7rem;
   }
 
-  .credential-line {
-    margin-top: 16px;
-    font-size: 0.86rem;
-  }
-
   .primary-link {
     margin-top: 22px;
     padding: 11px 17px;
@@ -905,11 +842,11 @@ a:focus-visible {
     padding: 68px 24px;
   }
 
-  .article-intro-layout {
+  .bio-intro-layout {
     gap: 46px;
   }
 
-  .article-intro-layout img {
+  .bio-intro-layout img {
     box-shadow: 10px 10px 0 var(--blue);
   }
 
@@ -918,13 +855,12 @@ a:focus-visible {
   }
 
   .platform-layout,
-  .qualification-section {
+  .bio-experience {
     padding: 70px 24px;
   }
 
   .platform-grid,
-  .qualification-grid,
-  .council-application,
+  .bio-experience-grid,
   .contact-band {
     grid-template-columns: 1fr;
   }
@@ -934,22 +870,8 @@ a:focus-visible {
   }
 
   .platform-card,
-  .qualification-grid article {
+  .bio-experience-grid article {
     min-height: 250px;
-  }
-
-  .experience-hero {
-    gap: 56px;
-    min-height: 0;
-    padding: 70px 24px 82px;
-  }
-
-  .experience-credential {
-    box-shadow: 10px 10px 0 var(--red);
-  }
-
-  .council-application {
-    gap: 36px;
   }
 
   .contact-band {

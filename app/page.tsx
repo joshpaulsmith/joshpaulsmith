@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, BadgeCheck, BriefcaseBusiness, Landmark, Newspaper } from 'lucide-react';
+import { ArrowRight, BriefcaseBusiness, Landmark } from 'lucide-react';
 import { CampaignFooter, CampaignHeader } from '@/components/campaign-shell';
 
 const routes = [
@@ -11,18 +11,14 @@ const routes = [
     copy: 'Responsible fiscal policy and strong local services.',
   },
   {
-    href: '/experience',
+    href: '/bio',
     icon: BriefcaseBusiness,
-    label: 'Experience',
-    copy: 'A business degree and a career helping businesses build and scale.',
-  },
-  {
-    href: '/article',
-    icon: Newspaper,
-    label: 'Full article',
-    copy: 'Read Joshua’s complete message to the community.',
+    label: 'Meet Joshua',
+    copy: 'Family roots, business experience and a commitment to community.',
   },
 ];
+
+export const dynamic = 'force-static';
 
 export default function Home() {
   return (
@@ -36,10 +32,6 @@ export default function Home() {
           <p>
             A fifth-generation St. Joseph Islander bringing business experience, practical decision making and a responsible fiscal lens to Council.
           </p>
-          <div className="credential-line">
-            <BadgeCheck size={21} aria-hidden="true" />
-            <span>Bachelor’s degree in business</span>
-          </div>
           <Link className="primary-link" href="/platform">
             Read the platform <ArrowRight size={18} aria-hidden="true" />
           </Link>

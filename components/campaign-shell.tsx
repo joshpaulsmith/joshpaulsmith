@@ -5,8 +5,7 @@ import { ArrowRight, Phone } from 'lucide-react';
 const navigation = [
   { href: '/', label: 'Home' },
   { href: '/platform', label: 'Platform' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/article', label: 'Article' },
+  { href: '/bio', label: 'Bio' },
 ];
 
 export function CampaignHeader() {

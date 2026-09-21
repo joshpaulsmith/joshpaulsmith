@@ -1,22 +1,43 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { BarChart3, BriefcaseBusiness, Scale, Users } from 'lucide-react';
 import { CampaignFooter, CampaignHeader, ContactBand } from '@/components/campaign-shell';
 
 export const metadata: Metadata = {
-  title: 'A Message from Joshua | Joshua P. Smith for Council',
-  description: 'Read Joshua Smith’s full message to residents of the Township of St. Joseph.',
+  title: 'Meet Joshua | Joshua P. Smith for Council',
+  description: 'Meet Joshua Smith and learn about his family roots, business experience and reasons for running for Council.',
 };
 
-export default function ArticlePage() {
+export const dynamic = 'force-static';
+
+const experience = [
+  {
+    icon: BriefcaseBusiness,
+    title: 'Business and operations',
+    copy: 'A career focused primarily on helping businesses build, improve and scale.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Managing growth',
+    copy: 'Experience balancing priorities, finding practical solutions and keeping attention on sustainable results.',
+  },
+  {
+    icon: Users,
+    title: 'Clear communication',
+    copy: 'An open, collaborative approach to decisions, expectations and accountability.',
+  },
+];
+
+export default function BioPage() {
   return (
     <main>
       <CampaignHeader />
 
-      <section className="page-intro article-intro-layout">
+      <section className="page-intro bio-intro-layout">
         <div>
-          <span className="overline">In his own words</span>
-          <h1>Josh Smith runs for Council in the Township of St. Joseph.</h1>
-          <p>Family roots, community service and a practical plan for the future.</p>
+          <span className="overline">Meet Joshua</span>
+          <h1>Deep roots. Practical experience.</h1>
+          <p>A fifth-generation St. Joseph Islander, husband, father and business professional ready to serve his community.</p>
         </div>
         <Image
           src="/family.jpeg"
@@ -27,7 +48,30 @@ export default function ArticlePage() {
         />
       </section>
 
-      <article className="longform">
+      <section className="bio-experience">
+        <div className="bio-experience-heading">
+          <Scale size={30} strokeWidth={1.7} aria-hidden="true" />
+          <span className="overline">Experience applied to Council</span>
+          <h2>Business discipline for responsible local government.</h2>
+          <p>
+            Joshua’s career has centred on helping businesses establish strong foundations, solve operational challenges and scale responsibly. That work provides a practical lens for priorities, tradeoffs, long-term obligations and the value ratepayers receive.
+          </p>
+        </div>
+        <div className="bio-experience-grid">
+          {experience.map(({ icon: Icon, title, copy }) => (
+            <article key={title}>
+              <Icon size={24} strokeWidth={1.8} aria-hidden="true" />
+              <h2>{title}</h2>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <article className="longform bio-story">
+        <span className="overline">In his own words</span>
+        <h2>Why I am running</h2>
+
         <p className="lead">My name is Joshua Smith, and I am a proud fifth-generation St. Joseph Islander.</p>
 
         <p>My family has called the Island home for over 100 years, and today my family and I are continuing to grow those roots, with our third child expected at the end of this year.</p>
@@ -42,7 +86,7 @@ export default function ArticlePage() {
 
         <p>I believe strongly in grassroots communication and transparency. Ratepayers should know what projects are being considered, what they will cost and how their tax dollars are being spent. They should also have a meaningful opportunity to be heard before important decisions are made. Council should be accessible and accountable to the community it represents.</p>
 
-        <p>I have a bachelor’s degree in business and a background primarily in business and operations. Open communication, responsible decision making, managing priorities and finding practical solutions have served me well throughout my career, and I would bring that same approach to council.</p>
+        <p>My background is primarily in business and operations. Open communication, responsible decision making, managing priorities and finding practical solutions have served me well throughout my career, and I would bring that same approach to council.</p>
 
         <p>For me, running for council is about giving back to a community that has given my family so much while making thoughtful, responsible decisions for its future.</p>
 
