@@ -74,8 +74,8 @@ export default function Home() {
       </article>
 
       <section className="platform-section" id="platform">
-        <header className="section-heading section-heading-light">
-          <span className="eyebrow eyebrow-light">The platform</span>
+        <header className="section-heading platform-heading">
+          <span className="eyebrow">The platform</span>
           <h2>What I find important.</h2>
           <p>A practical, transparent approach to the priorities that matter most to Township ratepayers.</p>
         </header>
