@@ -44,22 +44,10 @@ export default function Home() {
       </section>
 
       <article className="candidate-letter">
-        <div className="letter-opening">
-          <figure className="letter-family-photo">
-            <Image
-              src="/family.jpeg"
-              alt="Joshua Smith with his wife and their two children"
-              width={2400}
-              height={1600}
-            />
-            <figcaption>Joshua with his wife and their two children</figcaption>
-          </figure>
-          <header className="letter-heading">
-            <span className="eyebrow">In his own words</span>
-            <h1>Why I am running</h1>
-            <blockquote>“Council should be accessible and accountable to the community it represents.”</blockquote>
-          </header>
-        </div>
+        <header className="letter-heading">
+          <h1>Why I am running</h1>
+          <blockquote>“Council should be accessible and accountable to the community it represents.”</blockquote>
+        </header>
 
         <div className="letter-copy">
           <div>
@@ -78,12 +66,21 @@ export default function Home() {
             <p className="signature">Joshua Smith</p>
           </div>
         </div>
+
+        <figure className="letter-family-photo">
+          <Image
+            src="/family.jpeg"
+            alt="Joshua Smith with his wife and their two children"
+            width={2400}
+            height={1600}
+          />
+        </figure>
       </article>
 
       <section className="platform-section" id="platform">
         <header className="section-heading section-heading-light">
           <span className="eyebrow eyebrow-light">The platform</span>
-          <h2>Focused on the fundamentals.</h2>
+          <h2>What I find important.</h2>
           <p>A practical, transparent approach to the priorities that matter most to Township ratepayers.</p>
         </header>
 
@@ -95,17 +92,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="closing-sign-section" aria-label="Joshua P. Smith for Council">
-        <figure className="closing-sign">
-          <Image
-            src="/campaign-sign.jpeg"
-            alt="Vote Joshua P. Smith for Council, Rooted in our community"
-            width={862}
-            height={648}
-          />
-        </figure>
       </section>
 
       <ContactBand />

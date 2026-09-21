@@ -284,23 +284,20 @@ a:focus-visible {
   background: var(--white);
 }
 
-.letter-opening,
+.letter-heading,
 .letter-copy {
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.letter-opening {
-  display: grid;
-  grid-template-columns: minmax(440px, 1.08fr) minmax(340px, 0.92fr);
-  align-items: center;
-  gap: clamp(46px, 8vw, 120px);
+.letter-heading {
   margin-bottom: clamp(62px, 8vw, 112px);
 }
 
 .letter-family-photo {
-  margin: 0;
+  max-width: 720px;
+  margin: clamp(54px, 7vw, 96px) auto 0;
 }
 
 .letter-family-photo img {
@@ -311,21 +308,14 @@ a:focus-visible {
   box-shadow: 18px 18px 0 var(--blue);
 }
 
-.letter-family-photo figcaption {
-  margin-top: 16px;
-  color: #707789;
-  font-size: 0.7rem;
-  font-weight: 760;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .letter-heading h1 {
+  max-width: 900px;
   font-size: clamp(3.4rem, 6.2vw, 6.2rem);
   line-height: 0.9;
 }
 
 .letter-heading blockquote {
+  max-width: 940px;
   margin: 40px 0 0;
   padding: 28px 0;
   border-top: 3px solid var(--red);
@@ -366,30 +356,6 @@ a:focus-visible {
   font-size: 2rem;
   font-style: italic;
   font-weight: 650;
-}
-
-.closing-sign-section {
-  display: grid;
-  place-items: center;
-  padding: clamp(88px, 10vw, 150px) clamp(24px, 8vw, 128px);
-  background:
-    radial-gradient(circle at 0 100%, rgb(67 72 143 / 10%), transparent 32%),
-    var(--paper);
-}
-
-.closing-sign {
-  position: relative;
-  width: min(100%, 940px);
-  margin: 0;
-  padding: clamp(18px, 2.5vw, 36px);
-  background: var(--blue);
-  box-shadow: 22px 22px 0 var(--red);
-}
-
-.closing-sign img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .contact-band {
@@ -487,25 +453,6 @@ a:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .letter-opening {
-    grid-template-columns: 1fr;
-  }
-
-  .letter-family-photo {
-    max-width: 900px;
-  }
-
-  .letter-heading {
-    max-width: 760px;
-  }
-
-  .closing-sign-section {
-    grid-template-columns: 1fr;
-  }
-
-  .closing-sign {
-    max-width: 900px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -584,11 +531,6 @@ a:focus-visible {
     padding: 86px 24px;
   }
 
-  .letter-opening {
-    gap: 52px;
-    margin-bottom: 56px;
-  }
-
   .letter-family-photo img {
     box-shadow: 10px 10px 0 var(--blue);
   }
@@ -596,16 +538,6 @@ a:focus-visible {
   .letter-copy {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-
-  .closing-sign-section {
-    gap: 52px;
-    padding: 82px 24px 98px;
-  }
-
-  .closing-sign {
-    padding: 14px;
-    box-shadow: 12px 12px 0 var(--red);
   }
 
   .contact-band {
