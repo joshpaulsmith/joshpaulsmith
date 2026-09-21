@@ -161,9 +161,37 @@ a:focus-visible {
 
 .campaign-hero {
   display: grid;
-  grid-template-columns: minmax(390px, 0.86fr) minmax(540px, 1.14fr);
-  min-height: calc(100svh - 92px);
+  grid-template-columns: minmax(440px, 0.9fr) minmax(520px, 1.1fr);
   background: var(--white);
+}
+
+.hero-portrait-panel {
+  display: grid;
+  place-items: center;
+  min-height: 690px;
+  padding: clamp(54px, 7vw, 110px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 25% 22%, rgb(255 255 255 / 16%), transparent 34%),
+    linear-gradient(135deg, rgb(255 255 255 / 6%) 1px, transparent 1px),
+    var(--blue);
+  background-size: auto, 36px 36px;
+}
+
+.portrait-frame {
+  width: min(76%, 540px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: clamp(8px, 1.2vw, 14px) solid var(--white);
+  border-radius: 50%;
+  box-shadow: 28px 28px 0 var(--red), 0 28px 70px rgb(20 32 58 / 34%);
+}
+
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-copy {
@@ -175,6 +203,20 @@ a:focus-visible {
     radial-gradient(circle at 10% 0%, rgb(67 72 143 / 11%), transparent 33%),
     linear-gradient(135deg, transparent 0 72%, rgb(67 72 143 / 4%) 72%),
     var(--paper);
+}
+
+.hero-banner {
+  display: grid;
+  grid-column: 1 / -1;
+  place-items: center;
+  padding: 18px clamp(18px, 6vw, 90px);
+  background: var(--blue);
+}
+
+.hero-banner img {
+  display: block;
+  width: min(100%, 1176px);
+  height: auto;
 }
 
 .eyebrow {
@@ -195,6 +237,7 @@ a:focus-visible {
 .section-heading h2,
 .family-copy h2,
 .letter-heading h2,
+.closing-sign-copy h2,
 .contact-band h2 {
   margin: 0;
   font-family: var(--font-newsreader), Georgia, serif;
@@ -293,53 +336,6 @@ a:focus-visible {
   margin-right: 9px;
 }
 
-.campaign-sign {
-  position: relative;
-  display: grid;
-  place-items: center;
-  min-width: 0;
-  margin: 0;
-  padding: clamp(28px, 5vw, 82px);
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgb(255 255 255 / 6%) 1px, transparent 1px),
-    var(--blue);
-  background-size: 34px 34px;
-}
-
-.campaign-sign::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: clamp(8px, 1.2vw, 18px);
-  height: 100%;
-  background: var(--red);
-  content: '';
-}
-
-.campaign-sign img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: calc(100svh - 180px);
-  object-fit: contain;
-  box-shadow: 0 28px 70px rgb(20 32 58 / 32%);
-}
-
-.campaign-sign figcaption {
-  position: absolute;
-  right: clamp(24px, 4vw, 68px);
-  bottom: clamp(22px, 4vw, 62px);
-  max-width: 260px;
-  padding: 16px 22px;
-  background: var(--red);
-  color: var(--white);
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: clamp(1rem, 1.7vw, 1.35rem);
-  font-weight: 650;
-  line-height: 1.1;
-}
-
 .platform-section {
   padding: clamp(88px, 10vw, 150px) clamp(24px, 7vw, 112px);
   background: var(--ink);
@@ -394,22 +390,19 @@ a:focus-visible {
   background: rgb(255 255 255 / 5%);
 }
 
-.priority-marker {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.priority-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 50%;
   color: #ff7884;
-}
-
-.priority-marker span {
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
 }
 
 .priority-item h3 {
   max-width: 260px;
-  margin: 62px 0 16px;
+  margin: 48px 0 16px;
   font-family: var(--font-newsreader), Georgia, serif;
   font-size: clamp(1.6rem, 2.3vw, 2.15rem);
   font-weight: 610;
@@ -582,6 +575,44 @@ a:focus-visible {
   font-weight: 650;
 }
 
+.closing-sign-section {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.75fr) minmax(520px, 1.25fr);
+  align-items: center;
+  gap: clamp(50px, 9vw, 150px);
+  padding: clamp(88px, 10vw, 150px) clamp(24px, 8vw, 128px);
+  background:
+    radial-gradient(circle at 0 100%, rgb(67 72 143 / 10%), transparent 32%),
+    var(--paper);
+}
+
+.closing-sign-copy h2 {
+  font-size: clamp(3.2rem, 5.7vw, 5.8rem);
+  line-height: 0.94;
+}
+
+.closing-sign-copy p {
+  max-width: 520px;
+  margin: 30px 0 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.closing-sign {
+  position: relative;
+  margin: 0;
+  padding: clamp(18px, 2.5vw, 36px);
+  background: var(--blue);
+  box-shadow: 22px 22px 0 var(--red);
+}
+
+.closing-sign img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .contact-band {
   display: grid;
   grid-template-columns: minmax(320px, 1fr) auto;
@@ -678,17 +709,16 @@ a:focus-visible {
     min-height: auto;
   }
 
+  .hero-portrait-panel {
+    min-height: 580px;
+  }
+
+  .portrait-frame {
+    width: min(58vw, 470px);
+  }
+
   .hero-copy {
-    min-height: 670px;
-  }
-
-  .campaign-sign {
     min-height: 620px;
-  }
-
-  .campaign-sign img {
-    max-width: 900px;
-    max-height: none;
   }
 
   .priority-grid {
@@ -700,6 +730,18 @@ a:focus-visible {
   }
 
   .family-photo {
+    max-width: 900px;
+  }
+
+  .closing-sign-section {
+    grid-template-columns: 1fr;
+  }
+
+  .closing-sign-copy {
+    max-width: 760px;
+  }
+
+  .closing-sign {
     max-width: 900px;
   }
 }
@@ -741,6 +783,16 @@ a:focus-visible {
     min-height: auto;
   }
 
+  .hero-portrait-panel {
+    min-height: 390px;
+    padding: 46px 24px 58px;
+  }
+
+  .portrait-frame {
+    width: min(72vw, 310px);
+    box-shadow: 14px 14px 0 var(--red), 0 20px 45px rgb(20 32 58 / 32%);
+  }
+
   .hero-copy {
     min-height: 0;
     padding: 62px 24px 54px;
@@ -770,20 +822,8 @@ a:focus-visible {
     margin-top: 32px;
   }
 
-  .campaign-sign {
-    min-height: 0;
-    padding: 24px 24px 42px;
-  }
-
-  .campaign-sign::after {
-    width: 8px;
-  }
-
-  .campaign-sign figcaption {
-    right: 24px;
-    bottom: 20px;
-    max-width: 220px;
-    padding: 13px 17px;
+  .hero-banner {
+    padding: 10px 0;
   }
 
   .platform-section {
@@ -804,6 +844,7 @@ a:focus-visible {
   .section-heading h2,
   .family-copy h2,
   .letter-heading h2,
+  .closing-sign-copy h2,
   .contact-band h2 {
     font-size: clamp(3.15rem, 15vw, 4.6rem);
   }
@@ -848,6 +889,16 @@ a:focus-visible {
   .letter-copy {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .closing-sign-section {
+    gap: 52px;
+    padding: 82px 24px 98px;
+  }
+
+  .closing-sign {
+    padding: 14px;
+    box-shadow: 12px 12px 0 var(--red);
   }
 
   .contact-band {

@@ -38,6 +38,18 @@ export default function Home() {
       <CampaignHeader />
 
       <section className="campaign-hero">
+        <div className="hero-portrait-panel">
+          <div className="portrait-frame">
+            <Image
+              src="/joshua-portrait.jpg"
+              alt="Portrait of Joshua P. Smith"
+              width={1254}
+              height={1254}
+              priority
+            />
+          </div>
+        </div>
+
         <div className="hero-copy">
           <span className="eyebrow">Joshua P. Smith for Council</span>
           <h1>Rooted here.<br /><em>Ready to serve.</em></h1>
@@ -58,16 +70,15 @@ export default function Home() {
           </div>
         </div>
 
-        <figure className="campaign-sign">
+        <div className="hero-banner">
           <Image
-            src="/campaign-sign.jpeg"
-            alt="Vote Joshua P. Smith for Council, Rooted in our community"
-            width={862}
-            height={648}
+            src="/campaign-name-banner.png"
+            alt="Joshua P. Smith for Council, Rooted in our community"
+            width={1176}
+            height={402}
             priority
           />
-          <figcaption>Your voice at the Council table</figcaption>
-        </figure>
+        </div>
       </section>
 
       <section className="platform-section" id="platform">
@@ -78,10 +89,9 @@ export default function Home() {
         </header>
 
         <div className="priority-grid">
-          {priorities.map(({ icon: Icon, title, copy }, index) => (
+          {priorities.map(({ icon: Icon, title, copy }) => (
             <article className="priority-item" key={title}>
-              <div className="priority-marker">
-                <span>{String(index + 1).padStart(2, '0')}</span>
+              <div className="priority-icon">
                 <Icon size={24} strokeWidth={1.7} aria-hidden="true" />
               </div>
               <h3>{title}</h3>
@@ -137,6 +147,22 @@ export default function Home() {
           </div>
         </div>
       </article>
+
+      <section className="closing-sign-section">
+        <div className="closing-sign-copy">
+          <span className="eyebrow">Joshua P. Smith for Council</span>
+          <h2>Rooted in our community.</h2>
+          <p>Practical leadership, responsible decisions and a strong voice for the Township of St. Joseph.</p>
+        </div>
+        <figure className="closing-sign">
+          <Image
+            src="/campaign-sign.jpeg"
+            alt="Vote Joshua P. Smith for Council, Rooted in our community"
+            width={862}
+            height={648}
+          />
+        </figure>
+      </section>
 
       <ContactBand />
       <CampaignFooter />
