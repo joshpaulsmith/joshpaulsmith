@@ -159,42 +159,24 @@ a:focus-visible {
   display: block;
 }
 
-.campaign-intro {
-  display: grid;
-  grid-template-columns: minmax(150px, 230px) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(34px, 6vw, 90px);
-  max-width: 1420px;
-  margin: 0 auto;
-  padding: clamp(44px, 6vw, 82px) clamp(24px, 7vw, 104px);
-  background: var(--white);
-}
-
-.intro-portrait {
-  width: 100%;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border: 7px solid var(--white);
-  border-radius: 50%;
-  box-shadow: 11px 11px 0 var(--red), 0 16px 38px rgb(20 32 58 / 20%);
-}
-
-.intro-portrait img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.intro-banner {
+.opening-sign-section {
   display: grid;
   place-items: center;
-  padding: clamp(10px, 1.6vw, 18px);
-  background: var(--blue);
-  box-shadow: 16px 16px 0 rgb(67 72 143 / 12%);
+  padding: clamp(42px, 6vw, 86px) clamp(24px, 8vw, 128px);
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 4%) 25%, transparent 25%) 0 0 / 32px 32px,
+    var(--blue);
 }
 
-.intro-banner img {
+.opening-sign {
+  width: min(100%, 940px);
+  margin: 0;
+  padding: clamp(10px, 1.6vw, 18px);
+  background: var(--white);
+  box-shadow: 0 28px 70px rgb(14 23 43 / 28%);
+}
+
+.opening-sign img {
   display: block;
   width: 100%;
   height: auto;
@@ -216,7 +198,6 @@ a:focus-visible {
 
 .section-heading h2,
 .letter-heading h1,
-.closing-sign-copy h2,
 .contact-band h2 {
   margin: 0;
   font-family: var(--font-newsreader), Georgia, serif;
@@ -267,7 +248,7 @@ a:focus-visible {
 }
 
 .priority-item {
-  min-height: 300px;
+  min-height: 250px;
   padding: clamp(28px, 3vw, 44px);
   border-right: 1px solid rgb(255 255 255 / 20%);
   border-bottom: 1px solid rgb(255 255 255 / 20%);
@@ -278,19 +259,11 @@ a:focus-visible {
   background: rgb(255 255 255 / 5%);
 }
 
-.priority-icon {
-  display: grid;
-  width: 58px;
-  height: 58px;
-  place-items: center;
-  border: 1px solid rgb(255 255 255 / 30%);
-  border-radius: 50%;
-  color: #ff7884;
-}
-
 .priority-item h3 {
   max-width: 260px;
-  margin: 48px 0 16px;
+  margin: 0 0 18px;
+  padding-top: 22px;
+  border-top: 3px solid #ff7884;
   font-family: var(--font-newsreader), Georgia, serif;
   font-size: clamp(1.6rem, 2.3vw, 2.15rem);
   font-weight: 610;
@@ -397,30 +370,16 @@ a:focus-visible {
 
 .closing-sign-section {
   display: grid;
-  grid-template-columns: minmax(320px, 0.75fr) minmax(520px, 1.25fr);
-  align-items: center;
-  gap: clamp(50px, 9vw, 150px);
+  place-items: center;
   padding: clamp(88px, 10vw, 150px) clamp(24px, 8vw, 128px);
   background:
     radial-gradient(circle at 0 100%, rgb(67 72 143 / 10%), transparent 32%),
     var(--paper);
 }
 
-.closing-sign-copy h2 {
-  font-size: clamp(3.2rem, 5.7vw, 5.8rem);
-  line-height: 0.94;
-}
-
-.closing-sign-copy p {
-  max-width: 520px;
-  margin: 30px 0 0;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
 .closing-sign {
   position: relative;
+  width: min(100%, 940px);
   margin: 0;
   padding: clamp(18px, 2.5vw, 36px);
   background: var(--blue);
@@ -524,10 +483,6 @@ a:focus-visible {
 }
 
 @media (max-width: 1080px) {
-  .campaign-intro {
-    grid-template-columns: 190px minmax(0, 1fr);
-  }
-
   .priority-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -546,10 +501,6 @@ a:focus-visible {
 
   .closing-sign-section {
     grid-template-columns: 1fr;
-  }
-
-  .closing-sign-copy {
-    max-width: 760px;
   }
 
   .closing-sign {
@@ -590,22 +541,12 @@ a:focus-visible {
     display: none;
   }
 
-  .campaign-intro {
-    grid-template-columns: 1fr;
-    gap: 38px;
-    padding: 38px 24px 54px;
+  .opening-sign-section {
+    padding: 28px 18px 38px;
   }
 
-  .intro-portrait {
-    width: 138px;
-    justify-self: center;
-    border-width: 5px;
-    box-shadow: 8px 8px 0 var(--red), 0 12px 28px rgb(20 32 58 / 18%);
-  }
-
-  .intro-banner {
+  .opening-sign {
     padding: 8px;
-    box-shadow: 10px 10px 0 rgb(67 72 143 / 12%);
   }
 
   .platform-section {
@@ -623,7 +564,6 @@ a:focus-visible {
 
   .section-heading h2,
   .letter-heading h1,
-  .closing-sign-copy h2,
   .contact-band h2 {
     font-size: clamp(3.15rem, 15vw, 4.6rem);
   }
@@ -637,7 +577,6 @@ a:focus-visible {
   }
 
   .priority-item h3 {
-    margin-top: 48px;
     font-size: 1.8rem;
   }
 

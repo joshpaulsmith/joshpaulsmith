@@ -1,30 +1,24 @@
 import Image from 'next/image';
-import { Building2, CircleDollarSign, Eye, HeartHandshake, Route } from 'lucide-react';
 import { CampaignFooter, CampaignHeader, ContactBand } from '@/components/campaign-shell';
 
 const priorities = [
   {
-    icon: CircleDollarSign,
     title: 'Responsible fiscal policy',
     copy: 'Treat every tax dollar with care, understand the full cost of decisions and focus spending on measurable value for ratepayers.',
   },
   {
-    icon: Building2,
     title: 'Local business and economy',
     copy: 'Support the people building businesses here and strengthen the conditions that help our local economy grow.',
   },
   {
-    icon: Route,
     title: 'Roads and core services',
     copy: 'Keep roads safe and well cared for while protecting the dependable services residents use every day.',
   },
   {
-    icon: HeartHandshake,
     title: 'Families and community life',
     copy: 'Invest in recreation, facilities and activities that bring neighbours together and make this a great place to raise a family.',
   },
   {
-    icon: Eye,
     title: 'Open and accountable council',
     copy: 'Communicate project scope, cost and progress clearly, and give residents a meaningful opportunity to be heard.',
   },
@@ -37,25 +31,16 @@ export default function Home() {
     <main>
       <CampaignHeader />
 
-      <section className="campaign-intro" aria-label="Joshua P. Smith for Council">
-        <div className="intro-portrait">
+      <section className="opening-sign-section" aria-label="Joshua P. Smith for Council">
+        <figure className="opening-sign">
           <Image
-            src="/joshua-portrait.jpg"
-            alt="Portrait of Joshua P. Smith"
-            width={1254}
-            height={1254}
+            src="/campaign-sign.jpeg"
+            alt="Vote Joshua P. Smith for Council, Rooted in our community"
+            width={862}
+            height={648}
             priority
           />
-        </div>
-        <div className="intro-banner">
-          <Image
-            src="/campaign-name-banner.png"
-            alt="Joshua P. Smith for Council, Rooted in our community"
-            width={1176}
-            height={402}
-            priority
-          />
-        </div>
+        </figure>
       </section>
 
       <article className="candidate-letter">
@@ -103,11 +88,8 @@ export default function Home() {
         </header>
 
         <div className="priority-grid">
-          {priorities.map(({ icon: Icon, title, copy }) => (
+          {priorities.map(({ title, copy }) => (
             <article className="priority-item" key={title}>
-              <div className="priority-icon">
-                <Icon size={24} strokeWidth={1.7} aria-hidden="true" />
-              </div>
               <h3>{title}</h3>
               <p>{copy}</p>
             </article>
@@ -115,12 +97,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="closing-sign-section">
-        <div className="closing-sign-copy">
-          <span className="eyebrow">Joshua P. Smith for Council</span>
-          <h2>Rooted in our community.</h2>
-          <p>Practical leadership, responsible decisions and a strong voice for the Township of St. Joseph.</p>
-        </div>
+      <section className="closing-sign-section" aria-label="Joshua P. Smith for Council">
         <figure className="closing-sign">
           <Image
             src="/campaign-sign.jpeg"
