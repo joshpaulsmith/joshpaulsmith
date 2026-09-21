@@ -34,6 +34,7 @@ export default function Home() {
             alt="Vote Joshua P. Smith for Council, Rooted in our community"
             width={862}
             height={648}
+            draggable={false}
             priority
           />
         </figure>
@@ -60,17 +61,18 @@ export default function Home() {
             <p>For me, running for council is about giving back to a community that has given my family so much while making thoughtful, responsible decisions for its future.</p>
             <p>I am proud of my family’s deep roots here, proud to be raising my children here, and ready to do my part for the future of the Township of St. Joseph. I hope I can count on your support in the upcoming election.</p>
             <p className="signature">Joshua Smith</p>
+
+            <figure className="letter-family-photo">
+              <Image
+                src="/family.jpeg"
+                alt="Joshua Smith with his wife and their two children"
+                width={2400}
+                height={1600}
+                draggable={false}
+              />
+            </figure>
           </div>
         </div>
-
-        <figure className="letter-family-photo">
-          <Image
-            src="/family.jpeg"
-            alt="Joshua Smith with his wife and their two children"
-            width={2400}
-            height={1600}
-          />
-        </figure>
       </article>
 
       <section className="platform-section" id="platform">

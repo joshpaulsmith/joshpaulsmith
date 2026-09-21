@@ -6,7 +6,7 @@ export function CampaignHeader() {
     <header className="campaign-header">
       <div className="header-main">
         <div className="township-lockup">
-          <Image src="/township-logo.png" alt="Township of St. Joseph heritage logo" width={129} height={129} />
+          <Image src="/township-logo.png" alt="Township of St. Joseph heritage logo" width={129} height={129} draggable={false} />
           <span>Township of St. Joseph</span>
         </div>
 

@@ -79,6 +79,8 @@ a {
 
 img {
   max-width: 100%;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 a:focus-visible {
@@ -191,6 +193,8 @@ a:focus-visible {
 }
 
 .opening-sign {
+  position: relative;
+  isolation: isolate;
   width: min(100%, 940px);
   margin: 0;
   padding: clamp(10px, 1.6vw, 18px);
@@ -203,6 +207,15 @@ a:focus-visible {
   display: block;
   width: 100%;
   height: auto;
+  pointer-events: none;
+}
+
+.opening-sign::after,
+.letter-family-photo::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  content: '';
 }
 
 .eyebrow {
@@ -365,8 +378,10 @@ a:focus-visible {
 }
 
 .letter-family-photo {
-  max-width: 720px;
-  margin: clamp(54px, 7vw, 96px) auto 0;
+  position: relative;
+  isolation: isolate;
+  max-width: 440px;
+  margin: 42px 0 0 auto;
 }
 
 .letter-family-photo img {
@@ -374,6 +389,7 @@ a:focus-visible {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+  pointer-events: none;
   box-shadow: 14px 14px 0 var(--blue);
 }
 
@@ -666,6 +682,11 @@ a:focus-visible {
 
   .letter-family-photo img {
     box-shadow: 8px 8px 0 var(--blue);
+  }
+
+  .letter-family-photo {
+    max-width: 100%;
+    margin-top: 34px;
   }
 
   .letter-copy p {
