@@ -42,6 +42,17 @@ export default function Home() {
 
       <article className="candidate-letter">
         <header className="letter-heading">
+          <aside className="publication-note" aria-label="Original publication details">
+            <div>
+              <span>First published in Island Clippings</span>
+              <strong>September 10, 2026</strong>
+              <p>Joshua’s campaign announcement appeared before any other candidate announcement in the publication.</p>
+            </div>
+            <a href="https://islandclippings.com/issues/issue_1567.pdf" target="_blank" rel="noreferrer">
+              Read the original issue <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
+
           <h1>Why I am running</h1>
           <blockquote>“Council should be accessible and accountable to the community it represents.”</blockquote>
         </header>
