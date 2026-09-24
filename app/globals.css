@@ -544,7 +544,10 @@ a:focus-visible {
 
 @media (min-width: 901px) {
   .letter-copy .signature {
-    text-align: center;
+    max-width: 440px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
   }
 
   .letter-family-photo {
