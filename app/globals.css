@@ -197,9 +197,9 @@ a:focus-visible {
   position: absolute;
   z-index: -2;
   inset: -10px;
-  background: url('/st-joseph-island.avif') center 54% / cover no-repeat;
+  background: url('/st-joseph-island-lighthouse.webp') left center / cover no-repeat;
   content: '';
-  filter: saturate(0.78) contrast(1.08) brightness(0.72);
+  filter: saturate(0.82) contrast(1.08) brightness(0.7);
 }
 
 .opening-sign-section::after {
@@ -215,7 +215,8 @@ a:focus-visible {
 .opening-sign {
   position: relative;
   isolation: isolate;
-  width: min(82vw, 760px);
+  justify-self: end;
+  width: min(62vw, 680px);
   margin: 0;
   padding: clamp(10px, 1.6vw, 18px);
   border: 1px solid rgb(20 32 58 / 10%);
@@ -263,13 +264,33 @@ a:focus-visible {
 }
 
 .platform-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(88px, 10vw, 150px) clamp(24px, 7vw, 112px);
-  background:
-    radial-gradient(circle at 6% 8%, rgb(214 46 62 / 9%), transparent 27rem),
-    radial-gradient(circle at 94% 8%, rgb(244 207 55 / 17%), transparent 28rem),
-    radial-gradient(circle at 92% 92%, rgb(39 147 77 / 9%), transparent 30rem),
-    linear-gradient(180deg, #eaf3f7 0%, #f6f8fa 100%);
+  background: #eaf3f7;
   color: var(--ink);
+}
+
+.platform-section::before {
+  position: absolute;
+  z-index: -2;
+  inset: -12px;
+  background: url('/st-joseph-island.avif') center 54% / cover no-repeat;
+  content: '';
+  filter: saturate(0.68) contrast(1.06) brightness(0.84);
+}
+
+.platform-section::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 6% 8%, rgb(214 46 62 / 7%), transparent 27rem),
+    radial-gradient(circle at 94% 8%, rgb(244 207 55 / 13%), transparent 28rem),
+    radial-gradient(circle at 92% 92%, rgb(39 147 77 / 7%), transparent 30rem),
+    linear-gradient(180deg, rgb(239 246 249 / 82%) 0%, rgb(246 248 250 / 89%) 100%);
+  content: '';
 }
 
 .platform-heading .eyebrow {
@@ -712,6 +733,7 @@ a:focus-visible {
   }
 
   .opening-sign {
+    justify-self: center;
     width: 100%;
     padding: 8px;
   }
