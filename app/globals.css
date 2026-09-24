@@ -453,7 +453,6 @@ a:focus-visible {
 .letter-family-photo {
   position: relative;
   isolation: isolate;
-  grid-column: 2;
   width: 100%;
   max-width: 440px;
   margin: 0;
@@ -517,17 +516,14 @@ a:focus-visible {
 }
 
 .letter-closing {
-  display: grid;
-  grid-template-columns: minmax(170px, 1fr) minmax(320px, 440px) minmax(170px, 1fr);
-  align-items: center;
-  column-gap: clamp(20px, 3vw, 48px);
+  display: flex;
+  justify-content: center;
   max-width: 1180px;
   margin: clamp(54px, 7vw, 88px) auto 0;
 }
 
-.letter-closing .signature {
-  justify-self: end;
-  margin: 0;
+.letter-copy .signature {
+  margin: 14px 0 0;
   color: var(--blue);
   font-family: var(--font-newsreader), Georgia, serif;
   font-size: 2rem;
@@ -665,17 +661,8 @@ a:focus-visible {
   }
 
   .letter-closing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     max-width: 720px;
     margin-top: 52px;
-  }
-
-  .letter-closing .signature {
-    align-self: center;
-    margin-bottom: 28px;
-    text-align: center;
   }
 
   .contact-band {
