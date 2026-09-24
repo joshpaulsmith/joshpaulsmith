@@ -5,17 +5,14 @@ export function CampaignHeader() {
   return (
     <header className="campaign-header">
       <div className="header-main">
-        <div className="township-lockup">
-          <Image src="/township-logo.png" alt="Township of St. Joseph heritage logo" width={129} height={129} draggable={false} />
-          <span>Township of St. Joseph</span>
-        </div>
+        <Image className="header-logo" src="/township-logo.png" alt="Township of St. Joseph heritage logo" width={129} height={129} draggable={false} />
 
         <div className="candidate-mark">
           <strong>Joshua P. Smith</strong>
           <span>For Council</span>
         </div>
 
-        <p className="header-edition"><span>Municipal election</span> 2026</p>
+        <p className="header-township">Township of St. Joseph</p>
       </div>
     </header>
   );
