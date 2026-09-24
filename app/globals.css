@@ -118,8 +118,8 @@ a:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  min-height: 102px;
-  padding: 9px clamp(22px, 5vw, 76px);
+  min-height: 110px;
+  padding: 10px clamp(22px, 5vw, 76px);
 }
 
 .township-lockup {
@@ -155,15 +155,15 @@ a:focus-visible {
 }
 
 .candidate-mark strong {
-  font-size: 1.34rem;
+  font-size: clamp(1.55rem, 2vw, 1.8rem);
   font-weight: 850;
-  letter-spacing: 0.018em;
+  letter-spacing: 0.012em;
 }
 
 .candidate-mark span {
-  margin-top: 9px;
+  margin-top: 10px;
   color: var(--red);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.2em;
 }
@@ -172,7 +172,7 @@ a:focus-visible {
   justify-self: end;
   margin: 0;
   color: #626b80;
-  font-size: 0.7rem;
+  font-size: 0.76rem;
   font-weight: 750;
   letter-spacing: 0.13em;
   text-align: right;
@@ -396,7 +396,7 @@ a:focus-visible {
 
 .publication-note span,
 .publication-note strong {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 820;
   letter-spacing: 0.12em;
   line-height: 1.4;
@@ -418,7 +418,7 @@ a:focus-visible {
   padding-bottom: 4px;
   border-bottom: 2px solid var(--blue);
   color: var(--blue-deep);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 760;
   white-space: nowrap;
 }
@@ -446,13 +446,16 @@ a:focus-visible {
 
 .letter-heading h1 {
   max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
   font-size: clamp(3.4rem, 5.8vw, 6rem);
   line-height: 0.98;
+  text-align: center;
 }
 
 .letter-heading blockquote {
-  max-width: 940px;
-  margin: 40px 0 0;
+  max-width: 1040px;
+  margin: 40px auto 0;
   padding: 28px 0;
   border-top: 3px solid var(--red);
   border-bottom: 1px solid var(--line);
@@ -462,20 +465,22 @@ a:focus-visible {
   font-weight: 560;
   line-height: 1.34;
   letter-spacing: -0.025em;
+  text-align: center;
   text-wrap: balance;
 }
 
 .letter-copy {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(54px, 9vw, 140px);
+  gap: clamp(54px, 7vw, 104px);
+  max-width: 1180px;
 }
 
 .letter-copy p {
-  margin: 0 0 27px;
-  color: #424b60;
-  font-size: 1.03rem;
-  line-height: 1.86;
+  margin: 0 0 29px;
+  color: #374055;
+  font-size: 1.075rem;
+  line-height: 1.78;
   text-wrap: pretty;
 }
 
@@ -484,7 +489,7 @@ a:focus-visible {
   font-family: var(--font-newsreader), Georgia, serif;
   font-size: clamp(1.4rem, 2.1vw, 1.8rem);
   font-weight: 560;
-  line-height: 1.5;
+  line-height: 1.43;
 }
 
 .letter-copy .signature {
@@ -615,7 +620,7 @@ a:focus-visible {
   .letter-copy {
     grid-template-columns: 1fr;
     gap: 0;
-    max-width: 760px;
+    max-width: 720px;
   }
 
   .contact-band {
@@ -651,12 +656,12 @@ a:focus-visible {
   }
 
   .candidate-mark strong {
-    font-size: 0.92rem;
+    font-size: 1rem;
   }
 
   .candidate-mark span {
     margin-top: 6px;
-    font-size: 0.58rem;
+    font-size: 0.61rem;
     letter-spacing: 0.18em;
   }
 
@@ -758,8 +763,8 @@ a:focus-visible {
 
   .letter-copy p {
     margin-bottom: 23px;
-    font-size: 1rem;
-    line-height: 1.78;
+    font-size: 1.03rem;
+    line-height: 1.74;
   }
 
   .contact-band {
@@ -790,7 +795,7 @@ a:focus-visible {
   }
 
   .candidate-mark strong {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
   }
 
   .candidate-mark span {
