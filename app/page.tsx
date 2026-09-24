@@ -46,10 +46,9 @@ export default function Home() {
             <div>
               <span>First published in Island Clippings</span>
               <strong>September 10, 2026</strong>
-              <p>Joshua’s campaign announcement appeared before any other candidate announcement in the publication.</p>
             </div>
             <a href="https://islandclippings.com/issues/issue_1567.pdf" target="_blank" rel="noreferrer">
-              Read the original issue <span aria-hidden="true">↗</span>
+              Read the original Clippings article here
             </a>
           </aside>
 

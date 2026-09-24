@@ -411,14 +411,6 @@ a:focus-visible {
   color: var(--blue-deep);
 }
 
-.publication-note p {
-  grid-column: 1 / -1;
-  margin: 4px 0 0;
-  color: var(--ink-soft);
-  font-size: 0.96rem;
-  line-height: 1.55;
-}
-
 .publication-note a {
   display: inline-flex;
   align-items: center;
@@ -742,11 +734,6 @@ a:focus-visible {
   .publication-note div {
     grid-template-columns: 1fr;
     gap: 4px;
-  }
-
-  .publication-note p {
-    grid-column: auto;
-    margin-top: 7px;
   }
 
   .publication-note a {
