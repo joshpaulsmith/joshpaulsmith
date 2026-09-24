@@ -163,9 +163,9 @@ a:focus-visible {
 .candidate-mark span {
   margin-top: 10px;
   color: var(--red);
-  font-size: 0.78rem;
+  font-size: 0.94rem;
   font-weight: 800;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
 }
 
 .header-edition {
@@ -668,7 +668,7 @@ a:focus-visible {
 
   .candidate-mark span {
     margin-top: 6px;
-    font-size: 0.61rem;
+    font-size: 0.69rem;
     letter-spacing: 0.18em;
   }
 
@@ -806,7 +806,7 @@ a:focus-visible {
   }
 
   .candidate-mark span {
-    font-size: 0.54rem;
+    font-size: 0.64rem;
     letter-spacing: 0.17em;
   }
 
