@@ -501,6 +501,17 @@ a:focus-visible {
   font-weight: 650;
 }
 
+@media (min-width: 901px) {
+  .letter-copy .signature {
+    text-align: center;
+  }
+
+  .letter-family-photo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .contact-band {
   display: grid;
   grid-template-columns: 1fr;
