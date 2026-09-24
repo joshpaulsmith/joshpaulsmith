@@ -184,18 +184,38 @@ a:focus-visible {
 }
 
 .opening-sign-section {
+  position: relative;
+  isolation: isolate;
   display: grid;
   place-items: center;
+  overflow: hidden;
   padding: clamp(42px, 6vw, 86px) clamp(24px, 8vw, 128px);
+  background: #14254b;
+}
+
+.opening-sign-section::before {
+  position: absolute;
+  z-index: -2;
+  inset: -10px;
+  background: url('/st-joseph-island.avif') center 54% / cover no-repeat;
+  content: '';
+  filter: saturate(0.78) contrast(1.08) brightness(0.72);
+}
+
+.opening-sign-section::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
   background:
-    linear-gradient(135deg, rgb(255 255 255 / 4%) 25%, transparent 25%) 0 0 / 32px 32px,
-    var(--blue);
+    radial-gradient(circle at 50% 48%, rgb(19 37 78 / 4%) 0 28%, rgb(10 22 50 / 48%) 100%),
+    linear-gradient(135deg, rgb(31 52 105 / 44%), rgb(17 35 72 / 22%));
+  content: '';
 }
 
 .opening-sign {
   position: relative;
   isolation: isolate;
-  width: min(100%, 940px);
+  width: min(82vw, 760px);
   margin: 0;
   padding: clamp(10px, 1.6vw, 18px);
   border: 1px solid rgb(20 32 58 / 10%);
@@ -692,6 +712,7 @@ a:focus-visible {
   }
 
   .opening-sign {
+    width: 100%;
     padding: 8px;
   }
 
