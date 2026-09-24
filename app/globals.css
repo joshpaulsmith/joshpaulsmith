@@ -197,7 +197,7 @@ a:focus-visible {
   position: absolute;
   z-index: -2;
   inset: -10px;
-  background: url('/st-joseph-island-lighthouse.webp') left center / cover no-repeat;
+  background: url('/st-joseph-island-hero.webp') center 55% / cover no-repeat;
   content: '';
   filter: saturate(0.82) contrast(1.08) brightness(0.7);
 }
@@ -215,7 +215,7 @@ a:focus-visible {
 .opening-sign {
   position: relative;
   isolation: isolate;
-  justify-self: end;
+  justify-self: center;
   width: min(62vw, 680px);
   margin: 0;
   padding: clamp(10px, 1.6vw, 18px);
