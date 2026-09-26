@@ -235,6 +235,7 @@ a:focus-visible {
 }
 
 .section-heading h2,
+.experience-heading h2,
 .letter-heading h1,
 .contact-band h2 {
   margin: 0;
@@ -242,6 +243,99 @@ a:focus-visible {
   font-weight: 610;
   letter-spacing: -0.045em;
   text-wrap: balance;
+}
+
+.experience-section {
+  padding: clamp(86px, 9vw, 136px) clamp(24px, 8vw, 128px);
+  border-top: 1px solid var(--line);
+  background: #f5f6f9;
+}
+
+.experience-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.experience-heading {
+  max-width: 920px;
+  margin: 0 auto clamp(52px, 6vw, 82px);
+  text-align: center;
+}
+
+.experience-heading h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1;
+}
+
+.experience-heading > p {
+  max-width: 760px;
+  margin: 28px auto 0;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(38px, 6vw, 82px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  padding: 28px 0 30px;
+  border-top: 1px solid #cfd4df;
+}
+
+.experience-item:last-child {
+  grid-column: 1 / -1;
+}
+
+.experience-check {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+  border: 2px solid var(--blue);
+  background: var(--white);
+  color: var(--blue);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.experience-item h3 {
+  margin: 0 0 9px;
+  color: var(--ink);
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: clamp(1.35rem, 1.7vw, 1.58rem);
+  font-weight: 640;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.experience-item p {
+  max-width: 58ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.68;
+  text-wrap: pretty;
+}
+
+.experience-item:last-child p {
+  max-width: 92ch;
 }
 
 .platform-section {
@@ -384,7 +478,7 @@ a:focus-visible {
 }
 
 .candidate-letter {
-  padding: clamp(76px, 9vw, 130px) clamp(24px, 8vw, 128px) clamp(94px, 11vw, 170px);
+  padding: clamp(76px, 9vw, 130px) clamp(24px, 8vw, 128px) clamp(88px, 9vw, 132px);
   background: var(--white);
 }
 
@@ -654,6 +748,14 @@ a:focus-visible {
 }
 
 @media (max-width: 900px) {
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-item:last-child {
+    grid-column: auto;
+  }
+
   .letter-copy {
     grid-template-columns: 1fr;
     gap: 0;
@@ -715,6 +817,36 @@ a:focus-visible {
 
   .platform-section {
     padding: 72px 20px 80px;
+  }
+
+  .experience-section {
+    padding: 74px 20px 82px;
+  }
+
+  .experience-heading {
+    margin-bottom: 48px;
+  }
+
+  .experience-heading h2 {
+    font-size: clamp(2.75rem, 11.5vw, 4rem);
+    line-height: 1.02;
+  }
+
+  .experience-heading > p {
+    margin-top: 23px;
+    font-size: 1rem;
+  }
+
+  .experience-item {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 15px;
+    padding: 25px 0 27px;
+  }
+
+  .experience-check {
+    width: 27px;
+    height: 27px;
+    font-size: 0.92rem;
   }
 
   .section-heading {

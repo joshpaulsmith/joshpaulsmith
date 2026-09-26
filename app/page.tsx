@@ -20,6 +20,37 @@ const priorities = [
   },
 ];
 
+const experienceItems = [
+  {
+    title: 'Business education',
+    copy: 'My degree in business provides a foundation in operations, budgeting and financial decision-making.',
+  },
+  {
+    title: 'Business and management experience',
+    copy: 'My experience operating and helping businesses scale has involved budgeting, planning, managing people, serving customers and making decisions where money and resources are limited.',
+  },
+  {
+    title: 'Local roots',
+    copy: 'As a fifth-generation St. Joseph Islander, I have a long-standing connection to this community, its character and its future.',
+  },
+  {
+    title: 'A parent’s perspective',
+    copy: 'Raising a young family on the Island gives me direct perspective on the services, infrastructure, recreation and opportunities that affect local families.',
+  },
+  {
+    title: 'Local businesses and trades',
+    copy: 'Working with local businesses and trades has given me practical familiarity with small-business realities and the Island economy.',
+  },
+  {
+    title: 'Technology and communications',
+    copy: 'My background in web and marketing includes clear digital communication and making public information easier to find and understand.',
+  },
+  {
+    title: 'Operations and problem-solving',
+    copy: 'Managing projects, costs, contractors, clients and deadlines has taught me to balance priorities and find practical solutions. That operating experience is distinct from prior municipal-government experience, and it is the perspective I would bring to council discussions.',
+  },
+];
+
 export const dynamic = 'force-static';
 
 export default function Home() {
@@ -86,6 +117,28 @@ export default function Home() {
           </figure>
         </div>
       </article>
+
+      <section className="experience-section" aria-labelledby="experience-heading">
+        <div className="experience-inner">
+          <header className="experience-heading">
+            <span className="eyebrow">Experience and perspective</span>
+            <h2 id="experience-heading">Experience I’ll bring to Council.</h2>
+            <p>A practical combination of business training, operational experience and a lifelong connection to St. Joseph Island.</p>
+          </header>
+
+          <ul className="experience-list">
+            {experienceItems.map(({ title, copy }) => (
+              <li className="experience-item" key={title}>
+                <span className="experience-check" aria-hidden="true">✓</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{copy}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section className="platform-section" id="platform">
         <header className="section-heading platform-heading">
