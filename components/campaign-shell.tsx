@@ -212,7 +212,7 @@ export function ContactBand() {
 
           <a
             className="contact-card"
-            href="mailto:joshpaulsmith@outlook.com"
+            href="mailto:joshpaulsmith@outlook.com?subject=Township%20of%20St.%20Joseph%20Inquiry"
             aria-label="Email Joshua Smith at joshpaulsmith@outlook.com"
           >
             <span className="contact-icon">
