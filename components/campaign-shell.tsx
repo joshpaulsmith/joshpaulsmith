@@ -5,7 +5,14 @@ export function CampaignHeader() {
   return (
     <header className="campaign-header">
       <div className="header-main">
-        <Image className="header-logo" src="/township-logo.png" alt="Township of St. Joseph heritage logo" width={129} height={129} draggable={false} />
+        <Image
+          className="header-logo"
+          src="/township-logo.png"
+          alt="Township of St. Joseph heritage logo"
+          width={129}
+          height={129}
+          draggable={false}
+        />
 
         <div className="candidate-mark">
           <strong>Joshua P. Smith</strong>
@@ -33,39 +40,260 @@ export function CampaignFooter() {
 
 export function ContactBand() {
   return (
-    <section className="contact-band">
-      <div className="contact-heading">
-        <span className="eyebrow eyebrow-light">Your voice matters</span>
-        <h2>Let’s talk about our community.</h2>
-      </div>
-      <div className="contact-actions">
-        <div className="contact-action-card">
+    <section
+      className="contact-section"
+      aria-labelledby="contact-heading"
+    >
+      <style>{`
+        .contact-section {
+          padding: clamp(64px, 8vw, 112px) 20px;
+          background: linear-gradient(135deg, #b92636, #cb303f);
+          color: #fff;
+        }
+
+        .contact-section .contact-inner {
+          width: 100%;
+          max-width: 1040px;
+          margin: 0 auto;
+        }
+
+        .contact-section .contact-heading {
+          max-width: 780px;
+          margin: 0 auto clamp(36px, 5vw, 52px);
+          text-align: center;
+        }
+
+        .contact-section .contact-eyebrow {
+          display: block;
+          margin-bottom: 18px;
+          color: rgb(255 255 255 / 76%);
+          font-size: 0.75rem;
+          font-weight: 800;
+          letter-spacing: 0.18em;
+          line-height: 1;
+          text-transform: uppercase;
+        }
+
+        .contact-section .contact-heading h2 {
+          margin: 0;
+          font-family: var(--font-newsreader), Georgia, serif;
+          font-size: clamp(3rem, 6.2vw, 5.25rem);
+          font-weight: 620;
+          line-height: 0.96;
+          letter-spacing: -0.048em;
+          text-wrap: balance;
+        }
+
+        .contact-section .contact-heading p {
+          max-width: 50ch;
+          margin: 22px auto 0;
+          color: rgb(255 255 255 / 88%);
+          font-size: clamp(1rem, 1.35vw, 1.1rem);
+          line-height: 1.7;
+          text-wrap: pretty;
+        }
+
+        .contact-section .contact-options {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 18px;
+        }
+
+        .contact-section .contact-card {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          min-width: 0;
+          padding: clamp(24px, 3vw, 30px);
+          border: 1px solid rgb(255 255 255 / 38%);
+          border-radius: 8px;
+          background: rgb(0 0 0 / 10%);
+          color: #fff;
+          text-align: left;
+          text-decoration: none;
+          transition: background 180ms ease, border-color 180ms ease;
+        }
+
+        .contact-section .contact-card:hover {
+          border-color: #fff;
+          background: rgb(0 0 0 / 18%);
+        }
+
+        .contact-section .contact-card:focus-visible {
+          outline: 3px solid #fff;
+          outline-offset: 4px;
+        }
+
+        .contact-section .contact-icon {
+          display: grid;
+          place-items: center;
+          flex: 0 0 48px;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background: rgb(255 255 255 / 14%);
+        }
+
+        .contact-section .contact-details {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          min-width: 0;
+        }
+
+        .contact-section .contact-label {
+          color: rgb(255 255 255 / 76%);
+          font-size: 0.72rem;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          line-height: 1;
+          text-transform: uppercase;
+        }
+
+        .contact-section .contact-value {
+          font-family: var(--font-newsreader), Georgia, serif;
+          font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+          font-weight: 650;
+          line-height: 1.05;
+          letter-spacing: -0.035em;
+          overflow-wrap: anywhere;
+        }
+
+        .contact-section .contact-value-email {
+          font-family: var(--font-manrope), Arial, sans-serif;
+          font-size: clamp(0.98rem, 1.45vw, 1.12rem);
+          font-weight: 760;
+          line-height: 1.35;
+          letter-spacing: -0.02em;
+        }
+
+        .contact-section .contact-sign-note {
+          grid-column: 2;
+          margin: -2px 0 0;
+          padding: 0 16px;
+          color: rgb(255 255 255 / 82%);
+          font-size: 0.85rem;
+          line-height: 1.55;
+          text-align: center;
+          text-wrap: balance;
+        }
+
+        .contact-section .contact-sign-note a {
+          color: #fff;
+          font-weight: 750;
+          text-decoration: underline;
+          text-decoration-color: rgb(255 255 255 / 52%);
+          text-underline-offset: 0.18em;
+        }
+
+        .contact-section .contact-sign-note a:hover {
+          text-decoration-color: #fff;
+        }
+
+        .contact-section .contact-sign-note a:focus-visible {
+          outline: 3px solid #fff;
+          outline-offset: 4px;
+        }
+
+        @media (max-width: 700px) {
+          .contact-section {
+            padding: 58px 18px 64px;
+          }
+
+          .contact-section .contact-heading {
+            margin-bottom: 30px;
+          }
+
+          .contact-section .contact-heading h2 {
+            font-size: clamp(2.55rem, 12vw, 3.75rem);
+            line-height: 1;
+          }
+
+          .contact-section .contact-options {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+
+          .contact-section .contact-card {
+            gap: 14px;
+            padding: 20px 16px;
+          }
+
+          .contact-section .contact-value-email {
+            font-size: 0.98rem;
+          }
+
+          .contact-section .contact-sign-note {
+            grid-column: 1;
+            margin-top: 2px;
+            padding: 0 8px;
+            font-size: 0.82rem;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .contact-section .contact-card {
+            transition: none;
+          }
+        }
+      `}</style>
+
+      <div className="contact-inner">
+        <header className="contact-heading">
+          <span className="contact-eyebrow">Your voice matters</span>
+          <h2 id="contact-heading">
+            Let’s talk about our community.
+          </h2>
+          <p>
+            Have a question or an idea for our Township? I’d love to hear
+            from you.
+          </p>
+        </header>
+
+        <div className="contact-options">
           <a
-            className="contact-action"
+            className="contact-card"
             href="tel:+17052575300"
             aria-label="Call Joshua Smith at 705 257 5300"
           >
-            <Phone size={24} strokeWidth={1.8} aria-hidden="true" />
-            <span className="contact-action-copy">
-              <span className="contact-action-label">Call Joshua</span>
-              <strong>(705) 257-5300</strong>
+            <span className="contact-icon">
+              <Phone
+                size={24}
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
+            </span>
+
+            <span className="contact-details">
+              <span className="contact-label">Call Joshua</span>
+              <strong className="contact-value">
+                (705) 257-5300
+              </strong>
             </span>
           </a>
-        </div>
 
-        <div className="contact-action-card">
           <a
-            className="contact-action"
+            className="contact-card"
             href="mailto:joshpaulsmith@outlook.com"
             aria-label="Email Joshua Smith at joshpaulsmith@outlook.com"
           >
-            <Mail size={24} strokeWidth={1.8} aria-hidden="true" />
-            <span className="contact-action-copy">
-              <span className="contact-action-label">Email Joshua</span>
-              <strong className="contact-email">joshpaulsmith@outlook.com</strong>
+            <span className="contact-icon">
+              <Mail
+                size={24}
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
+            </span>
+
+            <span className="contact-details">
+              <span className="contact-label">Email Joshua</span>
+              <strong className="contact-value contact-value-email">
+                joshpaulsmith@outlook.com
+              </strong>
             </span>
           </a>
-          <p className="sign-request">
+
+          <p className="contact-sign-note">
             Request a campaign sign at{' '}
             <a
               href="mailto:joshpaulsmith@outlook.com?subject=Campaign%20sign%20request"

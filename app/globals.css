@@ -630,116 +630,59 @@ a:focus-visible {
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  gap: clamp(38px, 5vw, 56px);
+  gap: 44px;
   padding: clamp(76px, 9vw, 130px) clamp(24px, 8vw, 128px);
   background: linear-gradient(135deg, #b92636 0%, var(--red) 58%, #d63b49 100%);
   color: var(--white);
   text-align: center;
 }
 
-.contact-heading {
-  width: min(100%, 940px);
-}
-
 .contact-band h2 {
   max-width: 840px;
-  margin: 12px auto 0;
-  font-size: clamp(3rem, 5.25vw, 5.45rem);
-  line-height: 0.96;
-  letter-spacing: -0.047em;
-  text-wrap: balance;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clamp(3.1rem, 5.7vw, 5.9rem);
+  line-height: 0.98;
 }
 
-.contact-actions {
+.contact-band a {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: min(100%, 920px);
-  border: 1px solid rgb(255 255 255 / 46%);
-  background: rgb(90 5 18 / 12%);
-  box-shadow: 0 24px 54px rgb(92 8 21 / 18%);
-}
-
-.contact-action-card {
-  display: grid;
-  align-content: center;
-  min-width: 0;
-  padding: 28px clamp(20px, 3vw, 36px);
-}
-
-.contact-action-card + .contact-action-card {
-  border-left: 1px solid rgb(255 255 255 / 36%);
-}
-
-.contact-action {
-  display: inline-grid;
-  grid-template-columns: auto minmax(0, auto);
+  grid-template-columns: auto auto;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  justify-self: center;
+  column-gap: 14px;
+  width: min(100%, 440px);
   min-width: 0;
-  padding: 8px;
-  transition: transform 180ms ease;
+  padding: 24px 0 20px;
+  border-top: 1px solid rgb(255 255 255 / 55%);
+  border-bottom: 1px solid rgb(255 255 255 / 55%);
+  transition: border-color 180ms ease, transform 180ms ease;
 }
 
-.contact-action:hover {
+.contact-band a:hover {
+  border-color: rgb(255 255 255 / 90%);
   transform: translateX(4px);
 }
 
-.contact-band a:focus-visible {
-  outline-color: var(--white);
+.contact-band a svg {
+  grid-row: 1 / 3;
 }
 
-.contact-action-copy {
-  display: grid;
-  min-width: 0;
-  text-align: left;
-}
-
-.contact-action-label {
+.contact-band a span {
   color: rgb(255 255 255 / 75%);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   line-height: 1;
   text-transform: uppercase;
 }
 
-.contact-action strong {
-  margin-top: 8px;
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: clamp(1.75rem, 2.7vw, 2.35rem);
-  font-weight: 650;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-}
-
-.contact-action .contact-email {
-  min-width: 0;
-  font-family: var(--font-manrope), Arial, sans-serif;
-  font-size: clamp(1rem, 1.4vw, 1.22rem);
-  font-weight: 750;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  overflow-wrap: anywhere;
-}
-
-.sign-request {
-  margin: 16px auto 0;
-  color: rgb(255 255 255 / 82%);
-  font-size: 0.82rem;
-  line-height: 1.5;
-  text-wrap: balance;
-}
-
-.sign-request a {
-  font-weight: 750;
-  text-decoration: underline;
-  text-decoration-color: rgb(255 255 255 / 52%);
-  text-underline-offset: 0.18em;
-}
-
-.sign-request a:hover {
-  text-decoration-color: var(--white);
+.contact-band a strong {
+  margin-top: 7px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
 .campaign-footer {
@@ -831,7 +774,7 @@ a:focus-visible {
   }
 
   .contact-band a {
-    width: 100%;
+    width: min(100%, 430px);
     min-width: 0;
   }
 }
@@ -998,21 +941,8 @@ a:focus-visible {
   }
 
   .contact-band a {
+    width: 100%;
     min-width: 0;
-  }
-
-  .contact-actions {
-    grid-template-columns: 1fr;
-    width: min(100%, 540px);
-  }
-
-  .contact-action-card {
-    padding: 25px 20px;
-  }
-
-  .contact-action-card + .contact-action-card {
-    border-top: 1px solid rgb(255 255 255 / 36%);
-    border-left: 0;
   }
 
   .campaign-footer {
@@ -1037,22 +967,13 @@ a:focus-visible {
     letter-spacing: 0.17em;
   }
 
-  .contact-action {
+  .contact-band a {
     column-gap: 12px;
-    padding: 7px 4px;
+    padding: 21px 0 18px;
   }
 
-  .contact-action strong {
-    font-size: 1.75rem;
-  }
-
-  .contact-action .contact-email {
-    font-size: 0.98rem;
-  }
-
-  .sign-request {
-    max-width: 280px;
-    font-size: 0.78rem;
+  .contact-band a strong {
+    font-size: 1.8rem;
   }
 }
 
