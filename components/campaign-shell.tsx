@@ -49,6 +49,7 @@ export function ContactBand() {
           padding: clamp(48px, 7vw, 88px) 20px;
           background: linear-gradient(135deg, #b92636, #cb303f);
           color: #fff;
+          font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
         }
 
         .contact-section .contact-inner {
@@ -58,37 +59,38 @@ export function ContactBand() {
         }
 
         .contact-section .contact-heading {
-          max-width: 700px;
-          margin: 0 auto 32px;
+          max-width: 740px;
+          margin: 0 auto 38px;
           text-align: center;
         }
 
         .contact-section .contact-eyebrow {
           display: block;
-          margin-bottom: 16px;
-          color: #fff;
+          margin-bottom: 18px;
+          color: rgb(255 255 255 / 82%);
           font-size: 0.875rem;
-          font-weight: 750;
-          letter-spacing: 0.12em;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          line-height: 1.2;
           text-transform: uppercase;
         }
 
         .contact-section .contact-heading h2 {
           margin: 0;
           font-family: var(--font-newsreader), Georgia, serif;
-          font-size: clamp(2.1rem, 5vw, 3.5rem);
-          font-weight: 610;
-          line-height: 1.12;
-          letter-spacing: -0.025em;
+          font-size: clamp(2.65rem, 5.4vw, 3.9rem);
+          font-weight: 600;
+          line-height: 1.04;
+          letter-spacing: -0.04em;
           text-wrap: balance;
         }
 
         .contact-section .contact-heading p {
-          max-width: 48ch;
-          margin: 18px auto 0;
-          color: #fff;
-          font-size: 1rem;
-          line-height: 1.65;
+          max-width: 46ch;
+          margin: 20px auto 0;
+          color: rgb(255 255 255 / 90%);
+          font-size: clamp(1rem, 1.35vw, 1.125rem);
+          line-height: 1.6;
           text-wrap: pretty;
         }
 
@@ -101,9 +103,9 @@ export function ContactBand() {
         .contact-section .contact-card {
           display: flex;
           align-items: center;
-          gap: 16px;
+          gap: 18px;
           min-width: 0;
-          padding: 24px;
+          padding: 26px 28px;
           border: 1px solid rgb(255 255 255 / 38%);
           border-radius: 8px;
           background: rgb(0 0 0 / 10%);
@@ -136,25 +138,55 @@ export function ContactBand() {
         .contact-section .contact-details {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 7px;
           min-width: 0;
         }
 
         .contact-section .contact-label {
+          color: rgb(255 255 255 / 80%);
           font-size: 0.875rem;
-          font-weight: 700;
-          line-height: 1.3;
+          font-weight: 750;
+          letter-spacing: 0.08em;
+          line-height: 1.2;
+          text-transform: uppercase;
         }
 
         .contact-section .contact-value {
-          font-size: 1.375rem;
-          font-weight: 750;
-          line-height: 1.4;
+          font-size: clamp(1.3rem, 2vw, 1.5rem);
+          font-weight: 700;
+          line-height: 1.25;
+          letter-spacing: -0.025em;
           overflow-wrap: anywhere;
         }
 
         .contact-section .contact-value-email {
-          font-size: 1rem;
+          font-size: clamp(1rem, 1.55vw, 1.125rem);
+        }
+
+        .contact-section .contact-sign-note {
+          grid-column: 2;
+          margin: -2px 0 0;
+          color: rgb(255 255 255 / 88%);
+          font-size: 0.95rem;
+          line-height: 1.55;
+          text-align: center;
+        }
+
+        .contact-section .contact-sign-note a {
+          color: #fff;
+          font-weight: 750;
+          text-decoration: underline;
+          text-decoration-color: rgb(255 255 255 / 58%);
+          text-underline-offset: 0.18em;
+        }
+
+        .contact-section .contact-sign-note a:hover {
+          text-decoration-color: #fff;
+        }
+
+        .contact-section .contact-sign-note a:focus-visible {
+          outline: 3px solid #fff;
+          outline-offset: 4px;
         }
 
         @media (max-width: 700px) {
@@ -166,6 +198,11 @@ export function ContactBand() {
           .contact-section .contact-card {
             gap: 14px;
             padding: 20px 16px;
+          }
+
+          .contact-section .contact-sign-note {
+            grid-column: 1;
+            margin-top: 2px;
           }
         }
 
@@ -230,6 +267,14 @@ export function ContactBand() {
               </strong>
             </span>
           </a>
+
+          <p className="contact-sign-note">
+            Request a sign at{' '}
+            <a href="mailto:joshpaulsmith@outlook.com">
+              joshpaulsmith@outlook.com
+            </a>
+            .
+          </p>
         </div>
       </div>
     </section>
