@@ -269,10 +269,8 @@ export function ContactBand() {
           </a>
 
           <p className="contact-sign-note">
-            Request a sign at{' '}
-            <a href="mailto:joshpaulsmith@outlook.com">
-              joshpaulsmith@outlook.com
-            </a>
+            Request a sign{' '}
+            <a href="mailto:joshpaulsmith@outlook.com?subject=Sign%20Request">here</a>
             .
           </p>
         </div>
