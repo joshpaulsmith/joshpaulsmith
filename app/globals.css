@@ -698,12 +698,6 @@ a:focus-visible {
   margin: clamp(54px, 7vw, 88px) auto 0;
 }
 
-.letter-copy .handwritten-signature {
-  display: block;
-  width: min(130px, 100%);
-  height: auto;
-}
-
 .letter-copy .signature {
   margin: 4px 0 0;
   color: var(--blue);
