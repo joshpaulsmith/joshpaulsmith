@@ -361,9 +361,9 @@ a:focus-visible {
 
 .experience-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 clamp(38px, 6vw, 82px);
-  margin: 0;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -375,10 +375,6 @@ a:focus-visible {
   gap: 18px;
   padding: 28px 0 30px;
   border-top: 1px solid #cfd4df;
-}
-
-.experience-item:last-child {
-  grid-column: 1 / -1;
 }
 
 .experience-check {
@@ -414,10 +410,6 @@ a:focus-visible {
   font-size: 1rem;
   line-height: 1.68;
   text-wrap: pretty;
-}
-
-.experience-item:last-child p {
-  max-width: 92ch;
 }
 
 .platform-section {
@@ -830,14 +822,6 @@ a:focus-visible {
 }
 
 @media (max-width: 900px) {
-  .experience-list {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-item:last-child {
-    grid-column: auto;
-  }
-
   .letter-closing {
     max-width: 720px;
     margin-top: 52px;
