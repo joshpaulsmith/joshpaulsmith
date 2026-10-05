@@ -221,38 +221,45 @@ a:focus-visible {
 }
 
 .election-section {
-  padding: 24px clamp(24px, 5vw, 72px);
+  padding: clamp(44px, 5vw, 64px) 24px;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: #f4f5f8;
 }
 
 .election-inner {
-  display: grid;
-  grid-template-columns: minmax(165px, 0.9fr) repeat(2, minmax(205px, 1.15fr)) minmax(155px, 0.8fr);
-  align-items: center;
-  gap: clamp(16px, 2vw, 30px);
-  max-width: 1120px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .election-heading .eyebrow {
-  margin-bottom: 5px;
-  font-size: 0.67rem;
-  letter-spacing: 0.14em;
+  margin-bottom: 7px;
 }
 
-.election-heading p {
+.election-heading h2 {
   margin: 0;
   font-family: var(--font-newsreader), Georgia, serif;
-  font-size: 1.7rem;
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
   font-weight: 620;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
+.election-dates {
+  display: flex;
+  justify-content: center;
+  margin: 28px auto 18px;
+}
+
 .election-date {
+  flex: 1 1 0;
   min-width: 0;
-  padding-left: clamp(15px, 2vw, 25px);
+  max-width: 330px;
+  padding: 0 20px;
+}
+
+.election-date + .election-date {
   border-left: 1px solid var(--line);
 }
 
@@ -271,7 +278,7 @@ a:focus-visible {
   margin-top: 4px;
   color: var(--ink);
   font-family: var(--font-newsreader), Georgia, serif;
-  font-size: clamp(1.18rem, 1.8vw, 1.46rem);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
   font-weight: 620;
   line-height: 1.18;
   letter-spacing: -0.02em;
@@ -280,8 +287,7 @@ a:focus-visible {
 .election-link {
   display: inline-flex;
   align-items: center;
-  justify-self: end;
-  gap: 7px;
+  justify-content: center;
   min-height: 44px;
   padding-bottom: 4px;
   border-bottom: 2px solid var(--red);
@@ -294,10 +300,6 @@ a:focus-visible {
 .election-link:hover {
   border-color: var(--blue);
   color: var(--blue);
-}
-
-.election-link span {
-  font-size: 1.1rem;
 }
 
 .eyebrow {
@@ -834,16 +836,6 @@ a:focus-visible {
 }
 
 @media (max-width: 900px) {
-  .election-inner {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 26px;
-  }
-
-  .election-link {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
   .experience-list {
     grid-template-columns: 1fr;
   }
@@ -877,26 +869,29 @@ a:focus-visible {
 
 @media (max-width: 760px) {
   .election-section {
-    padding: 25px 20px 28px;
+    padding: 42px 20px 46px;
   }
 
-  .election-inner {
-    grid-template-columns: 1fr;
-    gap: 17px;
+  .election-dates {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin: 25px auto 16px;
   }
 
   .election-date {
-    padding-left: 15px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .election-date + .election-date {
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 
   .election-date time {
     font-size: 1.34rem;
-  }
-
-  .election-link {
-    grid-column: auto;
-    grid-row: auto;
-    justify-self: start;
   }
 
   .header-main {
