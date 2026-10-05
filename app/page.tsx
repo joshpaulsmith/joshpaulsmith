@@ -71,6 +71,39 @@ export default function Home() {
         </figure>
       </section>
 
+      <section className="election-section" aria-labelledby="election-heading">
+        <div className="election-inner">
+          <header className="election-heading">
+            <span className="eyebrow">2026 municipal election</span>
+            <h2 id="election-heading">Election dates</h2>
+            <p>Mark your calendar for the Township of St. Joseph municipal election.</p>
+          </header>
+
+          <div className="election-date-grid">
+            <div className="election-date">
+              <span className="election-date-label">Advance poll</span>
+              <time dateTime="2026-10-17">October 17, 2026</time>
+              <p>Saturday</p>
+            </div>
+            <div className="election-date">
+              <span className="election-date-label">Election day</span>
+              <time dateTime="2026-10-26">October 26, 2026</time>
+              <p>Monday</p>
+            </div>
+          </div>
+
+          <div className="election-details">
+            <p>
+              Confirm you are on the voters’ list and bring ID showing your name and address.
+              Photo ID is not required. The Township also provides a proxy option if you cannot vote in person.
+            </p>
+            <a href="https://stjosephtownship.com/election-information/" target="_blank" rel="noopener noreferrer">
+              Township election information
+            </a>
+          </div>
+        </div>
+      </section>
+
       <article className="candidate-letter">
         <header className="letter-heading">
           <aside className="publication-note" aria-label="Original publication details">
