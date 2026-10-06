@@ -189,20 +189,55 @@ export function ContactBand() {
           outline-offset: 4px;
         }
 
-        @media (max-width: 700px) {
+        @media (min-width: 901px) {
+          .contact-section .contact-eyebrow {
+            font-size: 1rem;
+          }
+
+          .contact-section .contact-heading h2 {
+            font-size: clamp(3.25rem, 5.4vw, 4.25rem);
+          }
+
+          .contact-section .contact-heading p {
+            font-size: 1.25rem;
+          }
+
+          .contact-section .contact-label {
+            font-size: 1rem;
+          }
+
+          .contact-section .contact-value {
+            font-size: 1.65rem;
+          }
+
+          .contact-section .contact-value-email {
+            font-size: 1.25rem;
+          }
+
+          .contact-section .contact-sign-note {
+            font-size: 1.1rem;
+          }
+        }
+
+        @media (max-width: 900px) {
           .contact-section .contact-options {
             grid-template-columns: 1fr;
+          }
+
+          .contact-section .contact-sign-note {
+            grid-column: 1;
+            margin-top: 2px;
+          }
+        }
+
+        @media (max-width: 700px) {
+          .contact-section .contact-options {
             gap: 12px;
           }
 
           .contact-section .contact-card {
             gap: 14px;
             padding: 20px 16px;
-          }
-
-          .contact-section .contact-sign-note {
-            grid-column: 1;
-            margin-top: 2px;
           }
         }
 

@@ -806,6 +806,96 @@ a:focus-visible {
   font-size: 0.7rem;
 }
 
+@media (min-width: 901px) {
+  .candidate-mark strong {
+    font-size: 1.95rem;
+  }
+
+  .candidate-mark span {
+    font-size: 1.05rem;
+  }
+
+  .header-township {
+    font-size: 1.125rem;
+    line-height: 1.15;
+  }
+
+  .eyebrow {
+    font-size: 0.9rem;
+  }
+
+  .election-date-label {
+    font-size: 0.88rem;
+  }
+
+  .election-date time {
+    font-size: clamp(1.7rem, 2.2vw, 1.9rem);
+  }
+
+  .election-link {
+    font-size: 1.05rem;
+  }
+
+  .publication-note span,
+  .publication-note strong {
+    font-size: 0.95rem;
+  }
+
+  .publication-note a {
+    font-size: 1.05rem;
+  }
+
+  .letter-copy p {
+    font-size: 1.375rem;
+    line-height: 1.68;
+  }
+
+  .letter-copy .lead {
+    font-size: clamp(1.9rem, 2.5vw, 2.15rem);
+  }
+
+  .letter-copy .signature {
+    font-size: 2.15rem;
+  }
+
+  .experience-heading > p,
+  .section-heading > p {
+    font-size: 1.25rem;
+  }
+
+  .experience-item h3 {
+    font-size: clamp(1.9rem, 2.2vw, 2.1rem);
+  }
+
+  .experience-item p {
+    font-size: 1.375rem;
+    line-height: 1.6;
+  }
+
+  .priority-item h3 {
+    font-size: clamp(1.9rem, 2.35vw, 2.25rem);
+  }
+
+  .priority-item p {
+    font-size: 1.2rem;
+    line-height: 1.65;
+  }
+
+  .campaign-footer > div strong,
+  .campaign-footer p {
+    font-size: 1.125rem;
+  }
+
+  .campaign-footer > div span,
+  .campaign-footer small {
+    font-size: 0.82rem;
+  }
+
+  .campaign-footer p {
+    line-height: 1.3;
+  }
+}
+
 @media (max-width: 1080px) {
   .section-heading {
     grid-template-columns: 1fr;
