@@ -30,6 +30,10 @@ const experienceItems = [
     copy: 'My experience operating and helping businesses scale has involved budgeting, planning, managing people, serving customers and making decisions where money and resources are limited.',
   },
   {
+    title: 'Government and municipal collaboration',
+    copy: 'I have worked for government and, through other roles, worked in conjunction with municipalities. These experiences required clear communication, coordination and accountability.',
+  },
+  {
     title: 'Local roots',
     copy: 'As a fifth-generation St. Joseph Islander, I have a long-standing connection to this community, its character and its future.',
   },
@@ -47,7 +51,7 @@ const experienceItems = [
   },
   {
     title: 'Operations and problem-solving',
-    copy: 'Managing projects, costs, contractors, clients and deadlines has taught me to balance priorities and find practical solutions. That operating experience is distinct from prior municipal-government experience, and it is the perspective I would bring to council discussions.',
+    copy: 'Managing projects, costs, contractors, clients and deadlines has taught me to balance priorities and find practical solutions. This business and operational experience complements my work for government and in conjunction with municipalities, while remaining distinct from having served in municipal government.',
   },
 ];
 
@@ -98,7 +102,7 @@ export default function Home() {
           <div>
             <p>I also want to focus on the fundamentals that matter to ratepayers. Supporting our small businesses and local economy, keeping our roads safe and well cared for, maintaining the services our residents depend on and making sure every tax dollar is spent responsibly and fairly.</p>
             <p>I believe strongly in grassroots communication and transparency. Ratepayers should know what projects are being considered, what they will cost and how their tax dollars are being spent. They should also have a meaningful opportunity to be heard before important decisions are made.</p>
-            <p>My background is primarily in business and operations. Open communication, responsible decision making, managing priorities and finding practical solutions have served me well throughout my career, and I would bring that same approach to council.</p>
+            <p>My background is primarily in business and operations. I have also worked for government and, through other roles, worked in conjunction with municipalities. Open communication, responsible decision making, managing priorities and finding practical solutions have served me well throughout my career, and I would bring that same approach to council.</p>
             <p>For me, running for council is about giving back to a community that has given my family so much while making thoughtful, responsible decisions for its future.</p>
             <p>I am proud of my family’s deep roots here, proud to be raising my children here, and ready to do my part for the future of the Township of St. Joseph. I hope I can count on your support in the upcoming election.</p>
             <p className="signature">Joshua P. Smith</p>
@@ -148,7 +152,7 @@ export default function Home() {
           <header className="experience-heading">
             <span className="eyebrow">Experience and perspective</span>
             <h2 id="experience-heading">Experience I’ll bring to Council.</h2>
-            <p>A practical combination of business training, operational experience and a lifelong connection to St. Joseph Island.</p>
+            <p>A practical combination of business training, operational and government experience, municipal collaboration and a lifelong connection to St. Joseph Island.</p>
           </header>
 
           <ul className="experience-list">
