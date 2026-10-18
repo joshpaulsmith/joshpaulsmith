@@ -46,7 +46,7 @@ export function ContactBand() {
     >
       <style>{`
         .contact-section {
-          padding: clamp(48px, 7vw, 88px) 20px;
+          padding: clamp(64px, 8vw, 112px) 20px;
           background: linear-gradient(135deg, #b92636, #cb303f);
           color: #fff;
           font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
@@ -54,7 +54,7 @@ export function ContactBand() {
 
         .contact-section .contact-inner {
           width: 100%;
-          max-width: 1000px;
+          max-width: 1040px;
           margin: 0 auto;
         }
 
@@ -97,7 +97,7 @@ export function ContactBand() {
         .contact-section .contact-options {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
+          gap: 18px;
         }
 
         .contact-section .contact-card {
@@ -231,6 +231,19 @@ export function ContactBand() {
         }
 
         @media (max-width: 700px) {
+          .contact-section {
+            padding: 58px 18px 64px;
+          }
+
+          .contact-section .contact-heading {
+            margin-bottom: 30px;
+          }
+
+          .contact-section .contact-heading h2 {
+            font-size: clamp(2.55rem, 12vw, 3.75rem);
+            line-height: 1;
+          }
+
           .contact-section .contact-options {
             gap: 12px;
           }
@@ -238,6 +251,17 @@ export function ContactBand() {
           .contact-section .contact-card {
             gap: 14px;
             padding: 20px 16px;
+          }
+
+          .contact-section .contact-value-email {
+            font-size: 0.98rem;
+          }
+
+          .contact-section .contact-sign-note {
+            grid-column: 1;
+            margin-top: 2px;
+            padding: 0 8px;
+            font-size: 0.82rem;
           }
         }
 
