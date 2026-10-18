@@ -633,8 +633,7 @@ a:focus-visible {
 .letter-family-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+  height: auto;
   pointer-events: none;
   box-shadow: 14px 14px 0 var(--blue);
 }

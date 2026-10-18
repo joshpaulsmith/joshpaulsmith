@@ -110,8 +110,9 @@ export default function Home() {
             <Image
               src="/family.jpeg"
               alt="Joshua Smith with his wife and their two children"
-              width={2400}
-              height={1600}
+              width={1290}
+              height={850}
+              sizes="(max-width: 760px) calc(100vw - 40px), 440px"
               draggable={false}
             />
           </figure>
