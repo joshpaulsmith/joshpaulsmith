@@ -110,13 +110,38 @@ export default function Home() {
             <Image
               src="/family.jpeg"
               alt="Joshua Smith with his wife and their two children"
-              width={2400}
-              height={1600}
+              width={1290}
+              height={850}
+              sizes="(max-width: 760px) calc(100vw - 40px), 440px"
               draggable={false}
             />
           </figure>
         </div>
       </article>
+
+      <section className="election-section" aria-labelledby="election-heading">
+        <div className="election-inner">
+          <div className="election-heading">
+            <span className="eyebrow">2026 municipal election</span>
+            <h2 id="election-heading">Voting dates</h2>
+          </div>
+
+          <div className="election-dates">
+            <div className="election-date">
+              <span className="election-date-label">Advance poll</span>
+              <time dateTime="2026-10-17">Saturday, October 17</time>
+            </div>
+            <div className="election-date">
+              <span className="election-date-label">Election day</span>
+              <time dateTime="2026-10-26">Monday, October 26</time>
+            </div>
+          </div>
+
+          <a className="election-link" href="https://stjosephtownship.com/election-information/" target="_blank" rel="noopener noreferrer">
+            Township voting details
+          </a>
+        </div>
+      </section>
 
       <section className="experience-section" aria-labelledby="experience-heading">
         <div className="experience-inner">

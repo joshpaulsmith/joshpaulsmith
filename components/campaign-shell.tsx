@@ -49,6 +49,7 @@ export function ContactBand() {
           padding: clamp(64px, 8vw, 112px) 20px;
           background: linear-gradient(135deg, #b92636, #cb303f);
           color: #fff;
+          font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
         }
 
         .contact-section .contact-inner {
@@ -58,38 +59,38 @@ export function ContactBand() {
         }
 
         .contact-section .contact-heading {
-          max-width: 780px;
-          margin: 0 auto clamp(36px, 5vw, 52px);
+          max-width: 740px;
+          margin: 0 auto 38px;
           text-align: center;
         }
 
         .contact-section .contact-eyebrow {
           display: block;
           margin-bottom: 18px;
-          color: rgb(255 255 255 / 76%);
-          font-size: 0.75rem;
+          color: rgb(255 255 255 / 82%);
+          font-size: 0.875rem;
           font-weight: 800;
-          letter-spacing: 0.18em;
-          line-height: 1;
+          letter-spacing: 0.14em;
+          line-height: 1.2;
           text-transform: uppercase;
         }
 
         .contact-section .contact-heading h2 {
           margin: 0;
           font-family: var(--font-newsreader), Georgia, serif;
-          font-size: clamp(3rem, 6.2vw, 5.25rem);
-          font-weight: 620;
-          line-height: 0.96;
-          letter-spacing: -0.048em;
+          font-size: clamp(2.65rem, 5.4vw, 3.9rem);
+          font-weight: 600;
+          line-height: 1.04;
+          letter-spacing: -0.04em;
           text-wrap: balance;
         }
 
         .contact-section .contact-heading p {
-          max-width: 50ch;
-          margin: 22px auto 0;
-          color: rgb(255 255 255 / 88%);
-          font-size: clamp(1rem, 1.35vw, 1.1rem);
-          line-height: 1.7;
+          max-width: 46ch;
+          margin: 20px auto 0;
+          color: rgb(255 255 255 / 90%);
+          font-size: clamp(1rem, 1.35vw, 1.125rem);
+          line-height: 1.6;
           text-wrap: pretty;
         }
 
@@ -104,7 +105,7 @@ export function ContactBand() {
           align-items: center;
           gap: 18px;
           min-width: 0;
-          padding: clamp(24px, 3vw, 30px);
+          padding: 26px 28px;
           border: 1px solid rgb(255 255 255 / 38%);
           border-radius: 8px;
           background: rgb(0 0 0 / 10%);
@@ -142,47 +143,40 @@ export function ContactBand() {
         }
 
         .contact-section .contact-label {
-          color: rgb(255 255 255 / 76%);
-          font-size: 0.72rem;
-          font-weight: 800;
-          letter-spacing: 0.14em;
-          line-height: 1;
+          color: rgb(255 255 255 / 80%);
+          font-size: 0.875rem;
+          font-weight: 750;
+          letter-spacing: 0.08em;
+          line-height: 1.2;
           text-transform: uppercase;
         }
 
         .contact-section .contact-value {
-          font-family: var(--font-newsreader), Georgia, serif;
-          font-size: clamp(1.65rem, 2.6vw, 2.15rem);
-          font-weight: 650;
-          line-height: 1.05;
-          letter-spacing: -0.035em;
+          font-size: clamp(1.3rem, 2vw, 1.5rem);
+          font-weight: 700;
+          line-height: 1.25;
+          letter-spacing: -0.025em;
           overflow-wrap: anywhere;
         }
 
         .contact-section .contact-value-email {
-          font-family: var(--font-manrope), Arial, sans-serif;
-          font-size: clamp(0.98rem, 1.45vw, 1.12rem);
-          font-weight: 760;
-          line-height: 1.35;
-          letter-spacing: -0.02em;
+          font-size: clamp(1rem, 1.55vw, 1.125rem);
         }
 
         .contact-section .contact-sign-note {
           grid-column: 2;
           margin: -2px 0 0;
-          padding: 0 16px;
-          color: rgb(255 255 255 / 82%);
-          font-size: 0.85rem;
+          color: rgb(255 255 255 / 88%);
+          font-size: 0.95rem;
           line-height: 1.55;
           text-align: center;
-          text-wrap: balance;
         }
 
         .contact-section .contact-sign-note a {
           color: #fff;
           font-weight: 750;
           text-decoration: underline;
-          text-decoration-color: rgb(255 255 255 / 52%);
+          text-decoration-color: rgb(255 255 255 / 58%);
           text-underline-offset: 0.18em;
         }
 
@@ -193,6 +187,47 @@ export function ContactBand() {
         .contact-section .contact-sign-note a:focus-visible {
           outline: 3px solid #fff;
           outline-offset: 4px;
+        }
+
+        @media (min-width: 901px) {
+          .contact-section .contact-eyebrow {
+            font-size: 1rem;
+          }
+
+          .contact-section .contact-heading h2 {
+            font-size: clamp(3.25rem, 5.4vw, 4.25rem);
+          }
+
+          .contact-section .contact-heading p {
+            font-size: 1.25rem;
+          }
+
+          .contact-section .contact-label {
+            font-size: 1rem;
+          }
+
+          .contact-section .contact-value {
+            font-size: 1.65rem;
+          }
+
+          .contact-section .contact-value-email {
+            font-size: 1.25rem;
+          }
+
+          .contact-section .contact-sign-note {
+            font-size: 1.1rem;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .contact-section .contact-options {
+            grid-template-columns: 1fr;
+          }
+
+          .contact-section .contact-sign-note {
+            grid-column: 1;
+            margin-top: 2px;
+          }
         }
 
         @media (max-width: 700px) {
@@ -210,7 +245,6 @@ export function ContactBand() {
           }
 
           .contact-section .contact-options {
-            grid-template-columns: 1fr;
             gap: 12px;
           }
 
@@ -274,7 +308,7 @@ export function ContactBand() {
 
           <a
             className="contact-card"
-            href="mailto:joshpaulsmith@outlook.com"
+            href="mailto:joshpaulsmith@outlook.com?subject=Township%20of%20St.%20Joseph%20Inquiry"
             aria-label="Email Joshua Smith at joshpaulsmith@outlook.com"
           >
             <span className="contact-icon">
@@ -294,13 +328,8 @@ export function ContactBand() {
           </a>
 
           <p className="contact-sign-note">
-            Request a campaign sign at{' '}
-            <a
-              href="mailto:joshpaulsmith@outlook.com?subject=Campaign%20sign%20request"
-              aria-label="Email Joshua Smith to request a campaign sign"
-            >
-              joshpaulsmith@outlook.com
-            </a>
+            Request a sign{' '}
+            <a href="mailto:joshpaulsmith@outlook.com?subject=Sign%20Request">here</a>
             .
           </p>
         </div>
