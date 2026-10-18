@@ -7,8 +7,8 @@ const priorities = [
     copy: 'Prioritize safe, well-maintained roads and dependable core services while protecting the character, heritage and natural setting that make our Township home.',
   },
   {
-    title: 'Families and community life',
-    copy: 'Support recreation, facilities and activities that bring neighbours together and make the Township a place where families can build their lives.',
+    title: 'Families, youth and senior wellness',
+    copy: 'Support recreation, facilities, programs and activities that promote youth and senior wellness, bring neighbours together and make the Township a healthy, connected place for people at every stage of life.',
   },
   {
     title: 'Responsible and transparent fiscal policy',
