@@ -244,24 +244,41 @@ export function ContactBand() {
             line-height: 1;
           }
 
+          .contact-section .contact-heading p {
+            font-size: 1.0625rem;
+            line-height: 1.65;
+          }
+
           .contact-section .contact-options {
             gap: 12px;
           }
 
           .contact-section .contact-card {
-            gap: 14px;
-            padding: 20px 16px;
+            gap: 15px;
+            padding: 22px 18px;
+          }
+
+          .contact-section .contact-label {
+            font-size: 0.9rem;
+            line-height: 1.3;
+          }
+
+          .contact-section .contact-value {
+            font-size: 1.35rem;
+            line-height: 1.3;
           }
 
           .contact-section .contact-value-email {
-            font-size: 0.98rem;
+            font-size: 1.05rem;
+            line-height: 1.4;
           }
 
           .contact-section .contact-sign-note {
             grid-column: 1;
             margin-top: 2px;
             padding: 0 8px;
-            font-size: 0.82rem;
+            font-size: 1rem;
+            line-height: 1.6;
           }
         }
 

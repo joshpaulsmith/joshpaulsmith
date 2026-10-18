@@ -61,6 +61,8 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -933,6 +935,11 @@ a:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .campaign-header {
+    position: relative;
+    top: auto;
+  }
+
   .election-section {
     padding: 42px 20px 46px;
   }
@@ -959,29 +966,49 @@ a:focus-visible {
     font-size: 1.34rem;
   }
 
+  .election-date-label,
+  .eyebrow,
+  .publication-note span,
+  .publication-note strong {
+    font-size: 0.82rem;
+    letter-spacing: 0.11em;
+  }
+
+  .election-link {
+    font-size: 0.96rem;
+  }
+
   .header-main {
     min-height: 0;
-    padding: 8px 14px 12px;
+    padding: 10px 16px 14px;
   }
 
   .header-logo {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .candidate-mark {
+    margin-top: 5px;
+    white-space: normal;
   }
 
   .candidate-mark strong {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
+    line-height: 1.08;
   }
 
   .candidate-mark span {
     margin-top: 6px;
-    font-size: 0.69rem;
-    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
   }
 
   .header-township {
     margin-top: 7px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.25;
   }
 
   .opening-sign-section {
@@ -1013,7 +1040,8 @@ a:focus-visible {
 
   .experience-heading > p {
     margin-top: 23px;
-    font-size: 1.08rem;
+    font-size: 1.125rem;
+    line-height: 1.65;
   }
 
   .experience-item {
@@ -1037,7 +1065,8 @@ a:focus-visible {
 
   .experience-item p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.125rem;
+    line-height: 1.65;
   }
 
   .section-heading {
@@ -1054,6 +1083,11 @@ a:focus-visible {
     line-height: 1.02;
   }
 
+  .section-heading > p {
+    font-size: 1.125rem;
+    line-height: 1.65;
+  }
+
   .letter-heading h1 {
     font-size: clamp(3rem, 14vw, 4.3rem);
     line-height: 1;
@@ -1066,18 +1100,25 @@ a:focus-visible {
 
   .priority-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .priority-item {
     min-height: 0;
-    padding: 34px 28px 38px;
+    padding: 32px 24px 36px;
+    background: var(--white);
   }
 
   .priority-item h3 {
     margin-bottom: 16px;
     padding-top: 10px;
-    font-size: 1.7rem;
-    line-height: 1.18;
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+
+  .priority-item p {
+    font-size: 1.125rem;
+    line-height: 1.65;
   }
 
   .candidate-letter {
@@ -1101,7 +1142,11 @@ a:focus-visible {
   }
 
   .publication-note a {
+    display: inline-flex;
+    align-items: center;
     width: fit-content;
+    min-height: 44px;
+    font-size: 1rem;
   }
 
   .letter-heading blockquote {
@@ -1146,16 +1191,31 @@ a:focus-visible {
   .campaign-footer small {
     justify-self: start;
   }
+
+  .campaign-footer > div strong {
+    font-size: 1.05rem;
+  }
+
+  .campaign-footer > div span,
+  .campaign-footer small {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .campaign-footer p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 }
 
 @media (max-width: 430px) {
   .candidate-mark strong {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .candidate-mark span {
-    font-size: 0.64rem;
-    letter-spacing: 0.17em;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
   }
 
   .contact-band a {
