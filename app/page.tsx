@@ -42,8 +42,8 @@ const experienceItems = [
     copy: 'Raising a young family on the Island gives me direct perspective on the services, infrastructure, recreation and opportunities that affect local families.',
   },
   {
-    title: 'Local businesses and trades',
-    copy: 'Working with local businesses and trades has given me practical familiarity with small-business realities and the Island economy.',
+    title: 'Local businesses, trades and infrastructure',
+    copy: 'Working with local businesses and trades has given me practical insight into small-business realities, the Island economy and the planning, costs and skilled work behind infrastructure projects. I would bring that perspective to making thoughtful, cost-conscious improvements to the infrastructure our community already depends on.',
   },
   {
     title: 'Technology and communications',
