@@ -5,8 +5,8 @@ const siteUrl = 'https://joshpaulsmith.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'joshpaulsmith.com',
-  description: 'joshpaulsmith.com',
+  title: 'Joshua P. Smith | Official Website',
+  description: 'The official website of Joshua P. Smith.',
   alternates: {
     canonical: '/',
   },
@@ -18,9 +18,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_CA',
     url: '/',
-    title: 'joshpaulsmith.com',
-    description: 'joshpaulsmith.com',
-    siteName: 'joshpaulsmith.com',
+    title: 'Joshua P. Smith | Official Website',
+    description: 'The official website of Joshua P. Smith.',
+    siteName: 'Joshua P. Smith',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Joshua P. Smith | Official Website',
+    description: 'The official website of Joshua P. Smith.',
   },
 };
 
